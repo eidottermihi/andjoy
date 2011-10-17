@@ -22,10 +22,7 @@ public class AndroidTestActivity extends Activity {
        
 
      
-        /** Called when the activity is first created. */
-       
-            super.onCreate(savedInstanceState);
-            setContentView(R.layout.main);
+        
             VideoView myVideoView = (VideoView)findViewById(R.id.myvideoview);
             myVideoView.setVideoURI(Uri.parse(SrcPath));
             myVideoView.setMediaController(new MediaController(this));
