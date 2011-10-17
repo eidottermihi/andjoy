@@ -12,7 +12,8 @@ import android.widget.VideoView;
 public class AndroidTestActivity extends Activity {
 	
 	
-	  String SrcPath = "rtsp://v1.cache3.c.youtube.com/CjYLENy73wIaLQkgD1YcagRmYhMYESARFEIJbXYtZ29vZ2xlSARSBXdhdGNoYK2GwP6GsJ6tTgw=/0/0/0/video.3gp";
+	 // String SrcPath = "rtsp://v1.cache3.c.youtube.com/CjYLENy73wIaLQkgD1YcagRmYhMYESARFEIJbXYtZ29vZ2xlSARSBXdhdGNoYK2GwP6GsJ6tTgw=/0/0/0/video.3gp";
+	String SrcPath = "http://h1930837.stratoserver.net:8080/LanCenter/video/testvideo.3gp";
        
     /** Called when the activity is first created. */
     @Override
