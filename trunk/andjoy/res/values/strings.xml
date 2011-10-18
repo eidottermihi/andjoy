@@ -2,4 +2,6 @@
 <resources>
     <string name="hello">Hello World, AndjoyActivity!</string>
     <string name="app_name">Andjoy</string>
+    <string name="videoTitle1">Crazy Frog</string>
+    <string name="videoDesc1">Crazy Frog (deutsch: "Verrückter Frosch") ist eine Animationsfigur, die im gleichnamigen Werbespot für einen Klingelton der Firma Jamba! vorkommt. Das Werbevideo setzt auf der Computeranimation The Annoying Thing des Schweden Erik Wernquist auf. Die Animation begleitete die Nachahmung des Geräusches eines Moped-Zweitaktmotors durch Daniel Malmedahl.</string>
 </resources>
