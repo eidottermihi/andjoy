@@ -11,6 +11,7 @@ public class VideoWebserverActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+//        String src = getString(R.string.testVideo1);
         String src = "http://h1930837.stratoserver.net:8080/LanCenter/video/testvideo.3gp";
         setContentView(R.layout.main);
         VideoView myView = (VideoView) findViewById(R.id.videoView1);
