@@ -13,7 +13,7 @@ public class VideoWebserverActivity extends Activity {
         super.onCreate(savedInstanceState);
         String src = getString(R.string.testVideo1);
 //        String src = "http://h1930837.stratoserver.net:8080/LanCenter/video/testvideo.3gp";
-        setContentView(R.layout.main);
+        setContentView(R.layout.video);
         VideoView myView = (VideoView) findViewById(R.id.videoView1);
         myView.setVideoURI(Uri.parse(src));
         myView.setMediaController(new MediaController(this));

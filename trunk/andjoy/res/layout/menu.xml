@@ -1,0 +1,26 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:id="@+id/linearLayout1"
+	android:layout_height="fill_parent" android:orientation="vertical">
+	<ScrollView android:id="@+id/scrollView1"
+		android:layout_height="match_parent" android:layout_width="wrap_content">
+		<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			android:layout_width="fill_parent" android:layout_height="fill_parent"
+			android:stretchColumns="*">
+			<TableRow>
+				<ImageButton android:layout_height="wrap_content"
+					android:layout_width="wrap_content" android:src="@drawable/icon"
+					android:id="@+id/imageButton1"></ImageButton>
+				<ImageButton android:layout_height="wrap_content"
+					android:layout_width="wrap_content" android:src="@drawable/icon"
+					android:id="@+id/imageButton2"></ImageButton>
+				<ImageButton android:layout_height="wrap_content"
+					android:layout_width="wrap_content" android:src="@drawable/icon"
+					android:id="@+id/imageButton3"></ImageButton>
+				<ImageButton android:layout_height="wrap_content"
+					android:layout_width="wrap_content" android:src="@drawable/icon"
+					android:id="@+id/imageButton4"></ImageButton>
+			</TableRow>
+		</TableLayout>
+	</ScrollView>
+</LinearLayout>
