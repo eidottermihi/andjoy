@@ -10,16 +10,30 @@
 			<TableRow>
 				<ImageButton android:layout_height="wrap_content"
 					android:layout_width="wrap_content" android:src="@drawable/icon"
-					android:id="@+id/imageButton1"></ImageButton>
+					android:id="@+id/imageButton11"></ImageButton>
 				<ImageButton android:layout_height="wrap_content"
 					android:layout_width="wrap_content" android:src="@drawable/icon"
-					android:id="@+id/imageButton2"></ImageButton>
+					android:id="@+id/imageButton12"></ImageButton>
 				<ImageButton android:layout_height="wrap_content"
 					android:layout_width="wrap_content" android:src="@drawable/icon"
-					android:id="@+id/imageButton3"></ImageButton>
+					android:id="@+id/imageButton13"></ImageButton>
 				<ImageButton android:layout_height="wrap_content"
 					android:layout_width="wrap_content" android:src="@drawable/icon"
-					android:id="@+id/imageButton4"></ImageButton>
+					android:id="@+id/imageButton14"></ImageButton>
+			</TableRow>
+			<TableRow>
+				<ImageButton android:layout_height="wrap_content"
+					android:layout_width="wrap_content" android:src="@drawable/icon"
+					android:id="@+id/imageButton21"></ImageButton>
+				<ImageButton android:layout_height="wrap_content"
+					android:layout_width="wrap_content" android:src="@drawable/icon"
+					android:id="@+id/imageButton22"></ImageButton>
+				<ImageButton android:layout_height="wrap_content"
+					android:layout_width="wrap_content" android:src="@drawable/icon"
+					android:id="@+id/imageButton23"></ImageButton>
+				<ImageButton android:layout_height="wrap_content"
+					android:layout_width="wrap_content" android:src="@drawable/icon"
+					android:id="@+id/imageButton24"></ImageButton>
 			</TableRow>
 		</TableLayout>
 	</ScrollView>
