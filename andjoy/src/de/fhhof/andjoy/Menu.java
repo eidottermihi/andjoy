@@ -1,5 +1,13 @@
 package de.fhhof.andjoy;
 
+import java.io.IOException;
+
+import org.jdom.Document;
+import org.jdom.Element;
+import org.jdom.JDOMException;
+import org.jdom.input.SAXBuilder;
+import org.jdom.xpath.XPath;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -41,7 +49,10 @@ public class Menu extends Activity implements OnClickListener {
 	 */
 	public void onClick(View v) {
 		int viewId = v.getId();
-		MediaInfo m = new MediaInfo();
+		MediaInfo m;
+		try {
+			m = getMediaInfo("imageButton11");
+		
 		Intent intent = new Intent(this, VideoWebserverActivity.class);
 		intent.putExtra("test", m);
 
@@ -75,17 +86,28 @@ public class Menu extends Activity implements OnClickListener {
 		default:
 			break;
 		}
-
+		} catch (JDOMException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
-	private MediaInfo getMediaInfo(String ButtonId){
+	private MediaInfo getMediaInfo(String ButtonId) throws JDOMException, IOException{
 		
 		MediaInfo mediaInfo = new MediaInfo();
-		String videoUrl;
+		Document doc = new SAXBuilder().build("../XML/mediainfo.xml");
+		Element videoElement = (Element) XPath.selectSingleNode(doc, "/mediaInfo/media/video-url");
+		String videoUrl = videoElement.getText();
 		String audioUrl;
 		String imageUrl;
-		String textUrl;
-		String headLine;
+		String textUrl = "I m text URL";
+		String headLine= "I m headline";
+		mediaInfo.setVideoUrl(videoUrl);
+		mediaInfo.setTextUrl(textUrl);
+		mediaInfo.setHeadLine(headLine);
 		return mediaInfo;
 		
 	}
