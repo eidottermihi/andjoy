@@ -41,11 +41,14 @@ public class Menu extends Activity implements OnClickListener {
 	 */
 	public void onClick(View v) {
 		int viewId = v.getId();
+		MediaInfo m = new MediaInfo();
 		Intent intent = new Intent(this, VideoWebserverActivity.class);
+		intent.putExtra("test", m);
 
 		switch (viewId) {
 		case R.id.imageButton11:
 			startActivity(intent);
+			
 			break;
 		case R.id.imageButton12:
 			startActivity(intent);
@@ -73,6 +76,18 @@ public class Menu extends Activity implements OnClickListener {
 			break;
 		}
 
+	}
+	
+	private MediaInfo getMediaInfo(String ButtonId){
+		
+		MediaInfo mediaInfo = new MediaInfo();
+		String videoUrl;
+		String audioUrl;
+		String imageUrl;
+		String textUrl;
+		String headLine;
+		return mediaInfo;
+		
 	}
 
 }
