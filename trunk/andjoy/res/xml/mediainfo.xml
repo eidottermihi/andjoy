@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mediainfo>
 	<media button="imageButton11">
-		<video-url></video-url>
-		<audio-url>http://h1930837.stratoserver.net:8080/LanCenter/video/testvideo.3gp</audio-url>
+		<video-url>http://h1930837.stratoserver.net:8080/LanCenter/video/testvideo.3gp</video-url>
+		<audio-url></audio-url>
 		<image-url></image-url>
 		<text>Dieser scheiß nervige Frosch.</text>
 		<headline>Crazy Frog</headline>

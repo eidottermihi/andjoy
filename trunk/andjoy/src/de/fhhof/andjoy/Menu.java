@@ -12,10 +12,14 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
+import org.xmlpull.v1.XmlPullParser;
+import org.xmlpull.v1.XmlPullParserException;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.res.XmlResourceParser;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageButton;
@@ -65,15 +69,17 @@ public class Menu extends Activity implements OnClickListener {
 			e.printStackTrace();
 		} catch (ParserConfigurationException e) {
 			e.printStackTrace();
+		} catch (XmlPullParserException e) {
+			e.printStackTrace();
 		}
-		if(m != null){
+		if (m != null) {
 			Intent intent = new Intent(this, VideoWebserverActivity.class);
 			intent.putExtra("test", m);
-			
+
 			switch (viewId) {
 			case R.id.imageButton11:
 				startActivity(intent);
-				
+
 				break;
 			case R.id.imageButton12:
 				startActivity(intent);
@@ -96,42 +102,44 @@ public class Menu extends Activity implements OnClickListener {
 			case R.id.imageButton24:
 				startActivity(intent);
 				break;
-				
+
 			default:
 				break;
 			}
-			
+
 		}
 
 	}
 
 	private MediaInfo getMediaInfo(String ButtonId) throws IOException,
-			SAXException, ParserConfigurationException {
+			SAXException, ParserConfigurationException, XmlPullParserException {
 
 		MediaInfo mediaInfo = new MediaInfo();
-		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-		DocumentBuilder db = dbf.newDocumentBuilder();
-		Document doc = db.parse(new InputSource("XML/mediainfo.xml"));
-		doc.getDocumentElement().normalize();
 
-		NodeList nodeList = doc.getElementsByTagName("media");
-		String videoUrl = null;
-		for (int i = 0; i < nodeList.getLength(); i++) {
-			Node node = nodeList.item(i);
-			Element e = (Element) node;
-			if (e.getAttribute("button").equals(ButtonId)) {
-				videoUrl = e.getFirstChild().getNodeValue();
-
+		XmlResourceParser xmlResourceParser = getResources().getXml(
+				R.xml.mediainfo);
+		xmlResourceParser.next();
+		int eventType = xmlResourceParser.getEventType();
+		while (eventType != XmlPullParser.END_DOCUMENT) {
+			if (eventType == XmlPullParser.START_TAG) {
+				if (xmlResourceParser.getName().equals("media")
+						&& xmlResourceParser.getAttributeValue(0).equals(
+								ButtonId)) {
+					eventType = xmlResourceParser.next();
+					mediaInfo.setVideoUrl(xmlResourceParser.getText());
+					eventType = xmlResourceParser.next();
+					mediaInfo.setAudioUrl(xmlResourceParser.getText());
+					eventType = xmlResourceParser.next();
+					mediaInfo.setImageUrl(xmlResourceParser.getText());
+					eventType = xmlResourceParser.next();
+					mediaInfo.setTextUrl(xmlResourceParser.getText());
+					eventType = xmlResourceParser.next();
+					mediaInfo.setHeadLine(xmlResourceParser.getText());
+					return mediaInfo;
+				}
 			}
-
+			eventType = xmlResourceParser.next();
 		}
-		String textUrl = "I m text URL";
-		String headLine = "I m headline";
-		mediaInfo.setVideoUrl(videoUrl);
-		mediaInfo.setTextUrl(textUrl);
-		mediaInfo.setHeadLine(headLine);
-		return mediaInfo;
-
+		return null;
 	}
-
 }
