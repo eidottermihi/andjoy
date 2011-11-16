@@ -1,23 +1,16 @@
 package de.fhhof.andjoy;
 
 import java.io.IOException;
+import java.io.InputStream;
+import java.util.List;
 
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
-
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
-import org.xml.sax.InputSource;
-import org.xml.sax.SAXException;
-import org.xmlpull.v1.XmlPullParser;
-import org.xmlpull.v1.XmlPullParserException;
+import org.jdom.Document;
+import org.jdom.Element;
+import org.jdom.JDOMException;
+import org.jdom.input.SAXBuilder;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.content.res.XmlResourceParser;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -59,87 +52,45 @@ public class Menu extends Activity implements OnClickListener {
 	 */
 	public void onClick(View v) {
 		int viewId = v.getId();
+		ImageButton button = (ImageButton) findViewById(viewId);
+		String btTag = (String) button.getTag();
+		Log.v("Menu", "Button mit Tag = " + btTag + " wurde gedrückt.");
 		MediaInfo m = null;
-
 		try {
-			m = getMediaInfo("imageButton11");
+			m = getMediaInfo(btTag);
 		} catch (IOException e) {
-			e.printStackTrace();
-		} catch (SAXException e) {
-			e.printStackTrace();
-		} catch (ParserConfigurationException e) {
-			e.printStackTrace();
-		} catch (XmlPullParserException e) {
-			e.printStackTrace();
+			Log.e("Menu", e.getMessage());
+		} catch (JDOMException e) {
+			Log.e("Menu", e.getMessage());
 		}
 		if (m != null) {
 			Intent intent = new Intent(this, VideoWebserverActivity.class);
 			intent.putExtra("test", m);
-
-			switch (viewId) {
-			case R.id.imageButton11:
-				startActivity(intent);
-
-				break;
-			case R.id.imageButton12:
-				startActivity(intent);
-				break;
-			case R.id.imageButton13:
-				startActivity(intent);
-				break;
-			case R.id.imageButton14:
-				startActivity(intent);
-				break;
-			case R.id.imageButton21:
-				startActivity(intent);
-				break;
-			case R.id.imageButton22:
-				startActivity(intent);
-				break;
-			case R.id.imageButton23:
-				startActivity(intent);
-				break;
-			case R.id.imageButton24:
-				startActivity(intent);
-				break;
-
-			default:
-				break;
-			}
-
+			startActivity(intent);
 		}
-
 	}
 
-	private MediaInfo getMediaInfo(String ButtonId) throws IOException,
-			SAXException, ParserConfigurationException, XmlPullParserException {
-
+	private MediaInfo getMediaInfo(String buttonId) throws JDOMException,
+			IOException {
 		MediaInfo mediaInfo = new MediaInfo();
-
-		XmlResourceParser xmlResourceParser = getResources().getXml(
-				R.xml.mediainfo);
-		xmlResourceParser.next();
-		int eventType = xmlResourceParser.getEventType();
-		while (eventType != XmlPullParser.END_DOCUMENT) {
-			if (eventType == XmlPullParser.START_TAG) {
-				if (xmlResourceParser.getName().equals("media")
-						&& xmlResourceParser.getAttributeValue(0).equals(
-								ButtonId)) {
-					eventType = xmlResourceParser.next();
-					mediaInfo.setVideoUrl(xmlResourceParser.getText());
-					eventType = xmlResourceParser.next();
-					mediaInfo.setAudioUrl(xmlResourceParser.getText());
-					eventType = xmlResourceParser.next();
-					mediaInfo.setImageUrl(xmlResourceParser.getText());
-					eventType = xmlResourceParser.next();
-					mediaInfo.setTextUrl(xmlResourceParser.getText());
-					eventType = xmlResourceParser.next();
-					mediaInfo.setHeadLine(xmlResourceParser.getText());
-					return mediaInfo;
-				}
+		// XML einlesen und Dokumentenbaum mit JDOM bauen
+		InputStream in = this.getResources().openRawResource(R.raw.mediainfo);
+		Document doc = new SAXBuilder().build(in);
+		Element root = doc.getRootElement();
+		// Über alle <media>-Elemente iterieren, bis man Eintrag für den Button
+		// findet
+		List<Element> elementList = root.getChildren("media");
+		for (Element element : elementList) {
+			if (element.getAttributeValue("button").equals(buttonId)) {
+				Log.v("Menu", "Eintrag für Button " + buttonId
+						+ " wurde gefunden.");
+				mediaInfo.setVideoUrl(element.getChildTextTrim("video-url"));
+				mediaInfo.setTextUrl(element.getChildTextTrim("text"));
+				return mediaInfo;
 			}
-			eventType = xmlResourceParser.next();
 		}
+		Log.v("Menu", "Eintrag für Button " + buttonId
+				+ " wurde nicht gefunden.");
 		return null;
 	}
 }
