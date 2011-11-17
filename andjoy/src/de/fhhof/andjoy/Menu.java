@@ -2,6 +2,7 @@ package de.fhhof.andjoy;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.jdom.Document;
@@ -19,12 +20,48 @@ import android.widget.ImageButton;
 
 public class Menu extends Activity implements OnClickListener {
 
+
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.menu);
 		// 1: To add a new Button first start in the menu.xml
 		initiateClickListener();
+		// Einlesen der mediainfo.xml
+		try {
+			parseMediaInfo();
+		} catch (JDOMException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 
+	}
+
+	private void parseMediaInfo() throws JDOMException, IOException {
+		AllMedia allMedia = AllMedia.getInstance();		
+		if (allMedia.getMediaInfo() == null) {
+			// XML wurde noch nicht geparst
+			InputStream in = this.getResources().openRawResource(
+					R.raw.mediainfo);
+			Document doc = new SAXBuilder().build(in);
+			Element root = doc.getRootElement();
+			// Über alle <media>-Elemente iterieren, bis man Eintrag für den
+			// Button
+			// findet
+			List<Element> elementList = root.getChildren("media");
+			List<MediaInfo> mediaList = new ArrayList<MediaInfo>();
+			for (Element element : elementList) {
+				MediaInfo media = new MediaInfo();
+				media.setButtonName(element.getAttributeValue("button"));
+				media.setText(element.getChildTextTrim("text"));
+				media.setVideoUrl(element.getChildTextTrim("video-url"));
+				mediaList.add(media);
+			}
+			allMedia.setMediaInfo(mediaList);
+		} else {
+			// XML wurde bereits geparst und ist im Speicher
+			// Nothing to do
+		}
 	}
 
 	/**
@@ -56,41 +93,37 @@ public class Menu extends Activity implements OnClickListener {
 		String btTag = (String) button.getTag();
 		Log.v("Menu", "Button mit Tag = " + btTag + " wurde gedrückt.");
 		MediaInfo m = null;
-		try {
-			m = getMediaInfo(btTag);
-		} catch (IOException e) {
-			Log.e("Menu", e.getMessage());
-		} catch (JDOMException e) {
-			Log.e("Menu", e.getMessage());
-		}
+		m = AllMedia.getInstance().getMediaInfoFor(btTag);
 		if (m != null) {
 			Intent intent = new Intent(this, VideoWebserverActivity.class);
 			intent.putExtra("test", m);
 			startActivity(intent);
+		} else {
+			Log.v("Menu", "MediaInfo nicht in Singleton-Klasse gefunden, m == null");
 		}
 	}
 
-	private MediaInfo getMediaInfo(String buttonId) throws JDOMException,
-			IOException {
-		MediaInfo mediaInfo = new MediaInfo();
-		// XML einlesen und Dokumentenbaum mit JDOM bauen
-		InputStream in = this.getResources().openRawResource(R.raw.mediainfo);
-		Document doc = new SAXBuilder().build(in);
-		Element root = doc.getRootElement();
-		// Über alle <media>-Elemente iterieren, bis man Eintrag für den Button
-		// findet
-		List<Element> elementList = root.getChildren("media");
-		for (Element element : elementList) {
-			if (element.getAttributeValue("button").equals(buttonId)) {
-				Log.v("Menu", "Eintrag für Button " + buttonId
-						+ " wurde gefunden.");
-				mediaInfo.setVideoUrl(element.getChildTextTrim("video-url"));
-				mediaInfo.setTextUrl(element.getChildTextTrim("text"));
-				return mediaInfo;
-			}
-		}
-		Log.v("Menu", "Eintrag für Button " + buttonId
-				+ " wurde nicht gefunden.");
-		return null;
-	}
+	// private MediaInfo getMediaInfo(String buttonId) throws JDOMException,
+	// IOException {
+	// MediaInfo mediaInfo = new MediaInfo();
+	// // XML einlesen und Dokumentenbaum mit JDOM bauen
+	// InputStream in = this.getResources().openRawResource(R.raw.mediainfo);
+	// Document doc = new SAXBuilder().build(in);
+	// Element root = doc.getRootElement();
+	// // Über alle <media>-Elemente iterieren, bis man Eintrag für den Button
+	// // findet
+	// List<Element> elementList = root.getChildren("media");
+	// for (Element element : elementList) {
+	// if (element.getAttributeValue("button").equals(buttonId)) {
+	// Log.v("Menu", "Eintrag für Button " + buttonId
+	// + " wurde gefunden.");
+	// mediaInfo.setVideoUrl(element.getChildTextTrim("video-url"));
+	// mediaInfo.setText(element.getChildTextTrim("text"));
+	// return mediaInfo;
+	// }
+	// }
+	// Log.v("Menu", "Eintrag für Button " + buttonId
+	// + " wurde nicht gefunden.");
+	// return null;
+	// }
 }
