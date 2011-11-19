@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	android:orientation="vertical" android:layout_width="match_parent"
-	android:layout_height="match_parent" android:weightSum="1">
-    <ImageView android:id="@+id/imageView1" android:layout_width="match_parent" android:layout_height="367dp" ></ImageView>
-	<TableLayout android:id="@+id/tableLayout1"
-		android:layout_width="match_parent" android:layout_height="wrap_content"
-		android:stretchColumns="*">
-		<TableRow android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/tableRow1">
-		</TableRow>
-		<TableRow android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/tableRow2">
-			<Button android:layout_height="match_parent" android:id="@+id/audioButton" android:layout_width="wrap_content" android:text="@string/playAudio"></Button>
-			<Button android:layout_height="wrap_content" android:id="@+id/videoButton" android:layout_width="wrap_content" android:text="@string/showVideo"></Button>
-		</TableRow>
-	</TableLayout>
+	android:layout_height="match_parent" android:weightSum="1" android:layout_gravity="top">
+    <ImageView android:id="@+id/imageView1" android:layout_height="wrap_content" android:layout_width="match_parent"></ImageView>
+    <TableLayout android:id="@+id/tableLayout1" android:layout_width="match_parent" android:stretchColumns="*" android:layout_height="wrap_content">
+        <TableRow android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/tableRow2">
+            <Button android:layout_height="match_parent" android:text="@string/playAudio" android:id="@+id/audioButton" android:layout_width="wrap_content"></Button>
+            <Button android:layout_height="wrap_content" android:text="@string/showVideo" android:id="@+id/videoButton" android:layout_width="wrap_content"></Button>
+        </TableRow>
+    </TableLayout>
 
 </LinearLayout>
