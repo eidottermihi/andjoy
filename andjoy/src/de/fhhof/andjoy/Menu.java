@@ -21,6 +21,7 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TableLayout;
 import android.widget.TableRow;
+import android.widget.VideoView;
 
 public class Menu extends Activity implements OnClickListener {
 
@@ -118,6 +119,8 @@ public class Menu extends Activity implements OnClickListener {
 				media.setButtonName(element.getAttributeValue("button"));
 				media.setText(element.getChildTextTrim("text"));
 				media.setVideoUrl(element.getChildTextTrim("video-url"));
+				media.setImageUrl(element.getChildTextTrim("image-url"));
+				media.setAudioUrl(element.getChildTextTrim("audio-url"));
 				mediaList.add(media);
 			}
 			allMedia.setMediaInfo(mediaList);
@@ -155,7 +158,7 @@ public class Menu extends Activity implements OnClickListener {
 		// int viewId = v.getId();
 		MyImageButton button = (MyImageButton) v;
 		MediaInfo mediaInfo = button.getMedia();
-		Intent intent = new Intent(this, VideoWebserverActivity.class);
+		Intent intent = new Intent(this, DetailViewActivity.class);
 		intent.putExtra("test", mediaInfo);
 		startActivity(intent);
 		// String btTag = (String) button.getTag();
