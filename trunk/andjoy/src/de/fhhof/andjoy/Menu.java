@@ -3,6 +3,7 @@ package de.fhhof.andjoy;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import org.jdom.Document;
@@ -13,19 +14,25 @@ import org.jdom.input.SAXBuilder;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
+import android.test.UiThreadTest;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.ImageButton;
+import android.widget.LinearLayout;
+import android.widget.ScrollView;
+import android.widget.TableLayout;
+import android.widget.TableRow;
 
 public class Menu extends Activity implements OnClickListener {
 
-
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.menu);
+		
+		// Nicht mehr benötigt
+		// setContentView(R.layout.menu);
 		// 1: To add a new Button first start in the menu.xml
-		initiateClickListener();
+		// initiateClickListener();
+		
+		
 		// Einlesen der mediainfo.xml
 		try {
 			parseMediaInfo();
@@ -34,11 +41,67 @@ public class Menu extends Activity implements OnClickListener {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		// Layout manuell erzeugen
+		createUI();
 
 	}
 
+	/**
+	 * Erzeugt das Hauptmenü in Abhängigkeit der vorhandenen Media-Einträgen.
+	 */
+	private void createUI() {
+		List<MediaInfo> mediaInfo = AllMedia.getInstance().getMediaInfo();
+		// LinearLayout
+		LinearLayout linLay = new LinearLayout(this);
+		linLay.setOrientation(LinearLayout.VERTICAL);
+		// Scrollbar
+		ScrollView scrView = new ScrollView(this);
+		// TableLayout
+		TableLayout tabLay = new TableLayout(this);
+		tabLay.setStretchAllColumns(true);
+		// Verschachteln
+		scrView.addView(tabLay);
+		linLay.addView(scrView);
+
+		// Für jeden Media-Eintrag einen zugehörigen ImageButton erzeugen
+		List<MyImageButton> imgBts = new ArrayList<MyImageButton>();
+		for (MediaInfo media : mediaInfo) {
+			MyImageButton tempBt = new MyImageButton(this, media);
+			tempBt.setImageResource(R.drawable.icon);
+			imgBts.add(tempBt);
+		}
+		// Berechnung der notwendigen Zeilen (akt. 4 Einträge pro Zeile)
+		int buttons = mediaInfo.size();
+		int btsPerRow = 4;
+		int rows;
+		if (buttons > 0) {
+			rows = (buttons / btsPerRow);
+			rows += 1;
+		} else {
+			rows = 0;
+		}
+		// Iterator über die vorhandenen Buttons
+		Iterator<MyImageButton> it = imgBts.iterator();
+		for (int i = 0; i < rows; i++) {
+			// Für jede Zeile eine TableRow
+			TableRow tRow = new TableRow(this);
+			for (int j = 0; j < btsPerRow; j++) {
+				// Für jede Zeile maximal 4 Einträge hinzufügen
+				if (it.hasNext()) {
+					MyImageButton tmpBt = it.next();
+					// ClickListener registrieren
+					tmpBt.setOnClickListener(this);
+					tRow.addView(tmpBt);
+				}
+			}
+			// Zeile hinzufügen
+			tabLay.addView(tRow);
+		}
+		this.setContentView(linLay);
+	}
+
 	private void parseMediaInfo() throws JDOMException, IOException {
-		AllMedia allMedia = AllMedia.getInstance();		
+		AllMedia allMedia = AllMedia.getInstance();
 		if (allMedia.getMediaInfo() == null) {
 			// XML wurde noch nicht geparst
 			InputStream in = this.getResources().openRawResource(
@@ -69,6 +132,7 @@ public class Menu extends Activity implements OnClickListener {
 	 * To initiate a new Button copy a line and change the imageButtonXX to the
 	 * value u chose in the menu.xml for ur new Button.
 	 */
+	@SuppressWarnings("unused")
 	private void initiateClickListener() {
 		findViewById(R.id.imageButton11).setOnClickListener(this);
 		findViewById(R.id.imageButton12).setOnClickListener(this);
@@ -88,19 +152,24 @@ public class Menu extends Activity implements OnClickListener {
 	 * menu.xml and defined in the initiateClickListener() method.
 	 */
 	public void onClick(View v) {
-		int viewId = v.getId();
-		ImageButton button = (ImageButton) findViewById(viewId);
-		String btTag = (String) button.getTag();
-		Log.v("Menu", "Button mit Tag = " + btTag + " wurde gedrückt.");
-		MediaInfo m = null;
-		m = AllMedia.getInstance().getMediaInfoFor(btTag);
-		if (m != null) {
-			Intent intent = new Intent(this, VideoWebserverActivity.class);
-			intent.putExtra("test", m);
-			startActivity(intent);
-		} else {
-			Log.v("Menu", "MediaInfo nicht in Singleton-Klasse gefunden, m == null");
-		}
+		// int viewId = v.getId();
+		MyImageButton button = (MyImageButton) v;
+		MediaInfo mediaInfo = button.getMedia();
+		Intent intent = new Intent(this, VideoWebserverActivity.class);
+		intent.putExtra("test", mediaInfo);
+		startActivity(intent);
+		// String btTag = (String) button.getTag();
+		// Log.v("Menu", "Button mit Tag = " + btTag + " wurde gedrückt.");
+		// MediaInfo m = null;
+		// m = AllMedia.getInstance().getMediaInfoFor(btTag);
+		// if (m != null) {
+		// Intent intent = new Intent(this, VideoWebserverActivity.class);
+		// intent.putExtra("test", m);
+		// startActivity(intent);
+		// } else {
+		// Log.v("Menu",
+		// "MediaInfo nicht in Singleton-Klasse gefunden, m == null");
+		// }
 	}
 
 	// private MediaInfo getMediaInfo(String buttonId) throws JDOMException,
