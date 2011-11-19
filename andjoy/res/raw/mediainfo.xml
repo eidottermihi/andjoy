@@ -7,4 +7,39 @@
 		<text>Dieser scheiß nervige Frosch.</text>
 		<headline>Crazy Frog</headline>
 	</media>
+	<media button="imageButton12">
+		<video-url>http://h1930837.stratoserver.net:8080/LanCenter/video/testvideo.3gp</video-url>
+		<audio-url></audio-url>
+		<image-url></image-url>
+		<text>Dieser scheiß nervige Frosch2.</text>
+		<headline>Crazy Frog</headline>
+	</media>
+	<media button="imageButton13">
+		<video-url>http://h1930837.stratoserver.net:8080/LanCenter/video/testvideo.3gp</video-url>
+		<audio-url></audio-url>
+		<image-url></image-url>
+		<text>Dieser scheiß nervige Frosch3.</text>
+		<headline>Crazy Frog</headline>
+	</media>
+	<media button="imageButton14">
+		<video-url>http://h1930837.stratoserver.net:8080/LanCenter/video/testvideo.3gp</video-url>
+		<audio-url></audio-url>
+		<image-url></image-url>
+		<text>Dieser scheiß nervige Frosch4.</text>
+		<headline>Crazy Frog</headline>
+	</media>
+	<media button="imageButton15">
+		<video-url>http://h1930837.stratoserver.net:8080/LanCenter/video/testvideo.3gp</video-url>
+		<audio-url></audio-url>
+		<image-url></image-url>
+		<text>Dieser scheiß nervige Frosch5.</text>
+		<headline>Crazy Frog</headline>
+	</media>
+	<media button="imageButton16">
+		<video-url>http://h1930837.stratoserver.net:8080/LanCenter/video/testvideo.3gp</video-url>
+		<audio-url></audio-url>
+		<image-url></image-url>
+		<text>Dieser scheiß nervige Frosch6.</text>
+		<headline>Crazy Frog</headline>
+	</media>
 </mediainfo>
