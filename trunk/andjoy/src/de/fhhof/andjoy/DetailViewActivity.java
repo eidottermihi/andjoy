@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class DetailViewActivity extends Activity implements OnClickListener {
 	MediaInfo mediaInfo;
@@ -34,7 +35,9 @@ public class DetailViewActivity extends Activity implements OnClickListener {
 			button1.setOnClickListener(this);
 			Button button2 = (Button) findViewById(R.id.videoButton);
 			button2.setOnClickListener(this);
-
+			// Text anzeigen
+			TextView tView = (TextView) findViewById(R.id.textView1);
+			tView.setText(mediaInfo.getText());
 		}
 	}
 
