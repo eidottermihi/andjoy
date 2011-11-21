@@ -14,14 +14,13 @@ import org.jdom.input.SAXBuilder;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.test.UiThreadTest;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TableLayout;
 import android.widget.TableRow;
-import android.widget.VideoView;
 
 public class Menu extends Activity implements OnClickListener {
 
@@ -92,7 +91,10 @@ public class Menu extends Activity implements OnClickListener {
 					MyImageButton tmpBt = it.next();
 					// ClickListener registrieren
 					tmpBt.setOnClickListener(this);
-					tRow.addView(tmpBt);
+					// MyMenuEntry erzeugen und einfügen
+					// TODO: MyImageButton-Klasse ist nicht mehr notwendig, Code-Refactoring!
+					tRow.addView(new MyMenuEntry(this, tmpBt.getMedia(), tmpBt));
+					Log.v("Menu", "Menu-Eintrag hinzugefügt: " + tmpBt.getMedia().getHeadLine());
 				}
 			}
 			// Zeile hinzufügen
@@ -100,7 +102,12 @@ public class Menu extends Activity implements OnClickListener {
 		}
 		this.setContentView(linLay);
 	}
-
+	
+	/**
+	 * Parst die XML, die alle Informationen zu den Medien enthält.
+	 * @throws JDOMException
+	 * @throws IOException
+	 */
 	private void parseMediaInfo() throws JDOMException, IOException {
 		AllMedia allMedia = AllMedia.getInstance();
 		if (allMedia.getMediaInfo() == null) {
@@ -121,6 +128,7 @@ public class Menu extends Activity implements OnClickListener {
 				media.setVideoUrl(element.getChildTextTrim("video-url"));
 				media.setImageUrl(element.getChildTextTrim("image-url"));
 				media.setAudioUrl(element.getChildTextTrim("audio-url"));
+				media.setHeadLine(element.getChildTextTrim("headline"));
 				mediaList.add(media);
 			}
 			allMedia.setMediaInfo(mediaList);
@@ -130,22 +138,6 @@ public class Menu extends Activity implements OnClickListener {
 		}
 	}
 
-	/**
-	 * 2: This method sets all clickListeners for the Buttons on the Main menu.
-	 * To initiate a new Button copy a line and change the imageButtonXX to the
-	 * value u chose in the menu.xml for ur new Button.
-	 */
-	@SuppressWarnings("unused")
-	private void initiateClickListener() {
-		findViewById(R.id.imageButton11).setOnClickListener(this);
-		findViewById(R.id.imageButton12).setOnClickListener(this);
-		findViewById(R.id.imageButton13).setOnClickListener(this);
-		findViewById(R.id.imageButton14).setOnClickListener(this);
-		findViewById(R.id.imageButton21).setOnClickListener(this);
-		findViewById(R.id.imageButton22).setOnClickListener(this);
-		findViewById(R.id.imageButton23).setOnClickListener(this);
-		findViewById(R.id.imageButton24).setOnClickListener(this);
-	}
 
 	/**
 	 * 3: This method represents the clickListener for the Button of the Main
@@ -161,41 +153,6 @@ public class Menu extends Activity implements OnClickListener {
 		Intent intent = new Intent(this, DetailViewActivity.class);
 		intent.putExtra("test", mediaInfo);
 		startActivity(intent);
-		// String btTag = (String) button.getTag();
-		// Log.v("Menu", "Button mit Tag = " + btTag + " wurde gedrückt.");
-		// MediaInfo m = null;
-		// m = AllMedia.getInstance().getMediaInfoFor(btTag);
-		// if (m != null) {
-		// Intent intent = new Intent(this, VideoWebserverActivity.class);
-		// intent.putExtra("test", m);
-		// startActivity(intent);
-		// } else {
-		// Log.v("Menu",
-		// "MediaInfo nicht in Singleton-Klasse gefunden, m == null");
-		// }
 	}
 
-	// private MediaInfo getMediaInfo(String buttonId) throws JDOMException,
-	// IOException {
-	// MediaInfo mediaInfo = new MediaInfo();
-	// // XML einlesen und Dokumentenbaum mit JDOM bauen
-	// InputStream in = this.getResources().openRawResource(R.raw.mediainfo);
-	// Document doc = new SAXBuilder().build(in);
-	// Element root = doc.getRootElement();
-	// // Über alle <media>-Elemente iterieren, bis man Eintrag für den Button
-	// // findet
-	// List<Element> elementList = root.getChildren("media");
-	// for (Element element : elementList) {
-	// if (element.getAttributeValue("button").equals(buttonId)) {
-	// Log.v("Menu", "Eintrag für Button " + buttonId
-	// + " wurde gefunden.");
-	// mediaInfo.setVideoUrl(element.getChildTextTrim("video-url"));
-	// mediaInfo.setText(element.getChildTextTrim("text"));
-	// return mediaInfo;
-	// }
-	// }
-	// Log.v("Menu", "Eintrag für Button " + buttonId
-	// + " wurde nicht gefunden.");
-	// return null;
-	// }
 }
