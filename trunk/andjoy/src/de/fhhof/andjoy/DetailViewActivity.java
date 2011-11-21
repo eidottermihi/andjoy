@@ -50,6 +50,8 @@ public class DetailViewActivity extends Activity implements OnClickListener {
 
 		try {
 			audio.setDataSource(mediaInfo.getAudioUrl());
+			audio.setVolume(10, 10);
+
 		} catch (IllegalArgumentException e) {
 			e.printStackTrace();
 		} catch (IllegalStateException e) {
