@@ -26,11 +26,23 @@ public class MyMenuEntry extends LinearLayout {
 	
 	private void init(Context ctx, ImageButton imageButton, MediaInfo mediaInfo){
 		tView = new TextView(ctx);
-		tView.setText(mediaInfo.getHeadLine());
-		tView.setTextColor(Color.WHITE);
+		tView.setText(cutString(mediaInfo.getHeadLine()));
+		//tView.setText(mediaInfo.getHeadLine());
+		//tView.setTextColor(Color.WHITE);
 		this.setOrientation(LinearLayout.VERTICAL);
 		this.addView(imageButton);
 		this.addView(tView);
+	}
+
+	private String cutString(String headLine) {
+		String s = headLine;
+		if(headLine.length()>10){
+			StringBuilder sb = new StringBuilder();
+			sb.append(headLine.substring(0, 8));
+			sb.append("..");
+			return sb.toString();
+		}
+		return s;
 	}
 
 	public TextView gettView() {
