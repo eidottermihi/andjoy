@@ -14,6 +14,7 @@ import org.jdom.input.SAXBuilder;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils.TruncateAt;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -93,7 +94,8 @@ public class Menu extends Activity implements OnClickListener {
 					tmpBt.setOnClickListener(this);
 					// MyMenuEntry erzeugen und einfügen
 					// TODO: MyImageButton-Klasse ist nicht mehr notwendig, Code-Refactoring!
-					tRow.addView(new MyMenuEntry(this, tmpBt.getMedia(), tmpBt));
+					MyMenuEntry tempMyMenuEntry = new MyMenuEntry(this, tmpBt.getMedia(), tmpBt);
+					tRow.addView(tempMyMenuEntry);
 					Log.v("Menu", "Menu-Eintrag hinzugefügt: " + tmpBt.getMedia().getHeadLine());
 				}
 			}
