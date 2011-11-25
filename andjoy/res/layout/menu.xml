@@ -2,39 +2,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="fill_parent" android:id="@+id/linearLayout1"
 	android:layout_height="fill_parent" android:orientation="vertical">
-	<ScrollView android:id="@+id/scrollView1"
-		android:layout_height="match_parent" android:layout_width="wrap_content">
-		<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-			android:layout_width="fill_parent" android:layout_height="fill_parent"
-			android:stretchColumns="*">
-			<TableRow>
-				<ImageButton android:layout_height="wrap_content"
-					android:layout_width="wrap_content" android:src="@drawable/icon"
-					android:id="@+id/imageButton11" android:tag="imageButton11"></ImageButton>
-				<ImageButton android:layout_height="wrap_content"
-					android:layout_width="wrap_content" android:src="@drawable/icon"
-					android:id="@+id/imageButton12" android:tag="imageButton12"></ImageButton>
-				<ImageButton android:layout_height="wrap_content"
-					android:layout_width="wrap_content" android:src="@drawable/icon"
-					android:id="@+id/imageButton13" android:tag="imageButton13"></ImageButton>
-				<ImageButton android:layout_height="wrap_content"
-					android:layout_width="wrap_content" android:src="@drawable/icon"
-					android:id="@+id/imageButton14" android:tag="imageButton14"></ImageButton>
-			</TableRow>
-			<TableRow>
-				<ImageButton android:layout_height="wrap_content"
-					android:layout_width="wrap_content" android:src="@drawable/icon"
-					android:id="@+id/imageButton21" android:tag="imageButton21"></ImageButton>
-				<ImageButton android:layout_height="wrap_content"
-					android:layout_width="wrap_content" android:src="@drawable/icon"
-					android:id="@+id/imageButton22" android:tag="imageButton22"></ImageButton>
-				<ImageButton android:layout_height="wrap_content"
-					android:layout_width="wrap_content" android:src="@drawable/icon"
-					android:id="@+id/imageButton23" android:tag="imageButton23"></ImageButton>
-				<ImageButton android:layout_height="wrap_content"
-					android:layout_width="wrap_content" android:src="@drawable/icon"
-					android:id="@+id/imageButton24" android:tag="imageButton24"></ImageButton>
-			</TableRow>
-		</TableLayout>
-	</ScrollView>
+    <GridView xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:id="@+id/gridView1"
+    android:layout_width="fill_parent" 
+    android:layout_height="fill_parent"
+    android:columnWidth="60dp"
+    android:numColumns="auto_fit"
+    android:verticalSpacing="10dp"
+    android:horizontalSpacing="10dp"
+    android:stretchMode="columnWidth"
+    android:gravity="center"
+/>
 </LinearLayout>
