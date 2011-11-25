@@ -1,7 +1,6 @@
 package de.fhhof.andjoy;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -26,8 +25,8 @@ public class MyMenuEntry extends LinearLayout {
 	
 	private void init(Context ctx, ImageButton imageButton, MediaInfo mediaInfo){
 		tView = new TextView(ctx);
-		tView.setText(cutString(mediaInfo.getHeadLine()));
-		//tView.setText(mediaInfo.getHeadLine());
+		//tView.setText(cutString(mediaInfo.getHeadLine()));
+		tView.setText(mediaInfo.getHeadLine());
 		//tView.setTextColor(Color.WHITE);
 		this.setOrientation(LinearLayout.VERTICAL);
 		this.addView(imageButton);

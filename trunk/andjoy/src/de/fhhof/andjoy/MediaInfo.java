@@ -9,18 +9,20 @@ public class MediaInfo implements Serializable {
 	String imageUrl;
 	String text;
 	String headLine;
+	private String buttonImage;
 
 	public MediaInfo() {
 	}
 
 	public MediaInfo(String videoUrl, String audioUrl, String imageUrl,
-			String textUrl, String headLine) {
+			String textUrl, String headLine, String buttonImage) {
 		super();
 		this.videoUrl = videoUrl;
 		this.audioUrl = audioUrl;
 		this.imageUrl = imageUrl;
 		this.text = textUrl;
 		this.headLine = headLine;
+		this.buttonImage = buttonImage;
 	}
 
 	public String getVideoUrl() {
@@ -69,6 +71,14 @@ public class MediaInfo implements Serializable {
 
 	public void setText(String text) {
 		this.text = text;
+	}
+
+	public String getButtonImage() {
+		return buttonImage;
+	}
+
+	public void setButtonImage(String buttonImage) {
+		this.buttonImage = buttonImage;
 	}
 	
 	
