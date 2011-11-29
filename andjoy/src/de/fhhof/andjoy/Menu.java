@@ -106,6 +106,8 @@ public class Menu extends Activity implements OnItemClickListener {
 		
 		this.setContentView(R.layout.menu);
 		GridView gridView = (GridView) findViewById(R.id.gridView1);
+		int id = this.getResources().getIdentifier("bg_wood", "drawable", "de.fhhof.andjoy");
+		gridView.setBackgroundResource(id);
 		gridView.setAdapter(new MenuEntryAdapter(this));
 		gridView.setOnItemClickListener(this);
 	}

@@ -5,79 +5,31 @@
 		<audio-url>http://h1930837.stratoserver.net:8080/LanCenter/audio/testAudio.mp3</audio-url>
 		<image-url>http://h1930837.stratoserver.net:8080/LanCenter/picture/test2Image.jpeg</image-url>
 		<text>Dieser scheiß nervige Frosch.</text>
-		<headline>Crazy Frog</headline>
-		<button-image>frog.jpg</button-image>
+		<headline>Hirsch</headline>
+		<button-image>hirsch</button-image>
 	</media>
 	<media button="imageButton12">
 		<video-url>http://h1930837.stratoserver.net:8080/LanCenter/video/testvideo.3gp</video-url>
 		<audio-url>http://h1930837.stratoserver.net:8080/LanCenter/audio/testAudio.mp3</audio-url>
 		<image-url>http://h1930837.stratoserver.net:8080/LanCenter/picture/test2Image.jpeg</image-url>
 		<text>Dieser scheiß nervige Frosch2.</text>
-		<headline>Crazy Frog</headline>
-		<button-image>frog.jpg</button-image>
+		<headline>Rebhuhn</headline>
+		<button-image>rebhuhn</button-image>
 	</media>
 	<media button="imageButton13">
 		<video-url>http://h1930837.stratoserver.net:8080/LanCenter/video/testvideo.3gp</video-url>
 		<audio-url>http://h1930837.stratoserver.net:8080/LanCenter/audio/testAudio.mp3</audio-url>
 		<image-url>http://h1930837.stratoserver.net:8080/LanCenter/picture/test2Image.jpeg</image-url>
 		<text>Dieser scheiß nervige Frosch3.</text>
-		<headline>Crazy Frogdasdasdasdasdassadadsasdlfksdölfksölfksdölfklösdkfslö</headline>
-		<button-image>frog.jpg</button-image>
+		<headline>Wolf</headline>
+		<button-image>wolf</button-image>
 	</media>
 	<media button="imageButton14">
 		<video-url>http://h1930837.stratoserver.net:8080/LanCenter/video/testvideo.3gp</video-url>
 		<audio-url>http://h1930837.stratoserver.net:8080/LanCenter/audio/testAudio.mp3</audio-url>
 		<image-url>http://h1930837.stratoserver.net:8080/LanCenter/picture/test2Image.jpeg</image-url>
 		<text>Dieser scheiß nervige Frosch4.</text>
-		<headline>Crazy Frog</headline>
-		<button-image>frog.jpg</button-image>
-	</media>
-	<media button="imageButton15">
-		<video-url>http://h1930837.stratoserver.net:8080/LanCenter/video/testvideo.3gp</video-url>
-		<audio-url>http://h1930837.stratoserver.net:8080/LanCenter/audio/testAudio.mp3</audio-url>
-		<image-url>http://h1930837.stratoserver.net:8080/LanCenter/picture/test2Image.jpeg</image-url>
-		<text>Dieser scheiß nervige Frosch5.</text>
-		<headline>Crazy Frog</headline>
-		<button-image>frog.jpg</button-image>
-	</media>
-	<media button="imageButton16">
-		<video-url>http://h1930837.stratoserver.net:8080/LanCenter/video/testvideo.3gp</video-url>
-		<audio-url>http://h1930837.stratoserver.net:8080/LanCenter/audio/testAudio.mp3</audio-url>
-		<image-url>http://h1930837.stratoserver.net:8080/LanCenter/picture/test2Image.jpeg</image-url>
-		<text>Dieser scheiß nervige Frosch6.</text>
-		<headline>Crazy Frog</headline>
-		<button-image>frog.jpg</button-image>
-	</media>
-	<media button="imageButton11">
-		<video-url>http://h1930837.stratoserver.net:8080/LanCenter/video/testvideo.3gp</video-url>
-		<audio-url>http://h1930837.stratoserver.net:8080/LanCenter/audio/testAudio.mp3</audio-url>
-		<image-url>http://h1930837.stratoserver.net:8080/LanCenter/picture/test2Image.jpeg</image-url>
-		<text>Dieser scheiß nervige Frosch.</text>
-		<headline>Crazy Frog</headline>
-		<button-image>frog.jpg</button-image>
-	</media>
-	<media button="imageButton11">
-		<video-url>http://h1930837.stratoserver.net:8080/LanCenter/video/testvideo.3gp</video-url>
-		<audio-url>http://h1930837.stratoserver.net:8080/LanCenter/audio/testAudio.mp3</audio-url>
-		<image-url>http://h1930837.stratoserver.net:8080/LanCenter/picture/test2Image.jpeg</image-url>
-		<text>Dieser scheiß nervige Frosch.</text>
-		<headline>Crazy Frog</headline>
-		<button-image>frog.jpg</button-image>
-	</media>
-	<media button="imageButton11">
-		<video-url>http://h1930837.stratoserver.net:8080/LanCenter/video/testvideo.3gp</video-url>
-		<audio-url>http://h1930837.stratoserver.net:8080/LanCenter/audio/testAudio.mp3</audio-url>
-		<image-url>http://h1930837.stratoserver.net:8080/LanCenter/picture/test2Image.jpeg</image-url>
-		<text>Dieser scheiß nervige Frosch.</text>
-		<headline>Crazy Frog</headline>
-		<button-image>frog.jpg</button-image>
-	</media>
-	<media button="imageButton11">
-		<video-url>http://h1930837.stratoserver.net:8080/LanCenter/video/testvideo.3gp</video-url>
-		<audio-url>http://h1930837.stratoserver.net:8080/LanCenter/audio/testAudio.mp3</audio-url>
-		<image-url>http://h1930837.stratoserver.net:8080/LanCenter/picture/test2Image.jpeg</image-url>
-		<text>Dieser scheiß nervige Frosch.</text>
-		<headline>Frosch</headline>
-		<button-image>frog.jpg</button-image>
+		<headline>Hase</headline>
+		<button-image>hase</button-image>
 	</media>
 </mediainfo>
