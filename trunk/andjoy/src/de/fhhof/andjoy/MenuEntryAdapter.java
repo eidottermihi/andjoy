@@ -19,6 +19,7 @@ import android.widget.TextView;
 public class MenuEntryAdapter extends BaseAdapter {
 	Context mContext;
 	AllMedia mediaInstance;
+	public static int i = 0;
 	
 	public MenuEntryAdapter(Context c){
 		mContext = c;
@@ -54,9 +55,19 @@ public class MenuEntryAdapter extends BaseAdapter {
 			returnView = (MenuEntryForAdapter) convertView;
 						
 		}
+//		returnView.getImageView().setScaleType(ImageView.ScaleType.FIT_XY);
+		returnView.getImageView().setAdjustViewBounds(true);
+		returnView.getImageView().setMaxHeight(100);
+		returnView.getImageView().setMinimumHeight(100);
 		returnView.getImageView().setScaleType(ImageView.ScaleType.CENTER_CROP);
-		returnView.getImageView().setImageResource(R.drawable.icon);
-//		returnView.getImageView().setImageResource(R.drawable.frog);
+		
+		int id = mContext.getResources().getIdentifier(tempInfo.getButtonImage(), "drawable", "de.fhhof.andjoy");
+		if(id == 0){
+			Log.v("MenuEntryAdapter", "frog.jpg nicht gefudnen");
+		} else {
+			Log.v("MenuEntryAdapter", "frog.jpg wurde gefunden. id = " + id);
+			returnView.getImageView().setImageResource(id);
+		}
 		
 		returnView.getTextView().setText(tempInfo.getHeadLine());
 		returnView.getTextView().setTextColor(Color.WHITE);
