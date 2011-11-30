@@ -1,4 +1,4 @@
-package de.fhhof.andjoy;
+package de.fhhof.andjoy.menu;
 
 import android.content.Context;
 import android.text.TextUtils.TruncateAt;

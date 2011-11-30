@@ -1,9 +1,8 @@
-package de.fhhof.andjoy;
+package de.fhhof.andjoy.data;
 
 import java.io.Serializable;
 
 public class MediaInfo implements Serializable {
-	String buttonName;
 	String videoUrl;
 	String audioUrl;
 	String imageUrl;
@@ -57,14 +56,6 @@ public class MediaInfo implements Serializable {
 		this.headLine = headLine;
 	}
 
-	public String getButtonName() {
-		return buttonName;
-	}
-
-	public void setButtonName(String buttonName) {
-		this.buttonName = buttonName;
-	}
-
 	public String getText() {
 		return text;
 	}
@@ -80,7 +71,5 @@ public class MediaInfo implements Serializable {
 	public void setButtonImage(String buttonImage) {
 		this.buttonImage = buttonImage;
 	}
-	
-	
 
 }

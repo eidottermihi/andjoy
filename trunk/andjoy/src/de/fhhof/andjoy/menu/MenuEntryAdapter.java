@@ -1,5 +1,7 @@
-package de.fhhof.andjoy;
+package de.fhhof.andjoy.menu;
 
+import de.fhhof.andjoy.data.AllMedia;
+import de.fhhof.andjoy.data.MediaInfo;
 import android.content.Context;
 import android.graphics.Color;
 import android.util.Log;
@@ -63,9 +65,9 @@ public class MenuEntryAdapter extends BaseAdapter {
 		
 		int id = mContext.getResources().getIdentifier(tempInfo.getButtonImage(), "drawable", "de.fhhof.andjoy");
 		if(id == 0){
-			Log.v("MenuEntryAdapter", "frog.jpg nicht gefudnen");
+			Log.v("MenuEntryAdapter", tempInfo.getButtonImage() +  " nicht gefudnen");
 		} else {
-			Log.v("MenuEntryAdapter", "frog.jpg wurde gefunden. id = " + id);
+			Log.v("MenuEntryAdapter", tempInfo.getButtonImage() +  " wurde gefunden. id = " + id);
 			returnView.getImageView().setImageResource(id);
 		}
 		

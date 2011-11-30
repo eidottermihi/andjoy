@@ -1,5 +1,6 @@
-package de.fhhof.andjoy;
+package de.fhhof.andjoy.menu;
 
+import de.fhhof.andjoy.data.MediaInfo;
 import android.content.Context;
 import android.widget.ImageButton;
 

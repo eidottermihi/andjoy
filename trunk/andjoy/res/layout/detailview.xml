@@ -2,13 +2,25 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	android:orientation="vertical" android:layout_width="match_parent"
 	android:layout_height="match_parent"  android:layout_gravity="top">
-    <ImageView android:id="@+id/imageView1" android:layout_height="wrap_content" android:layout_width="match_parent"></ImageView>
-    <TextView android:text="TextView" android:id="@+id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
-    <TableLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/tableLayout1" android:stretchColumns="*">
-        <TableRow android:layout_width="wrap_content" android:id="@+id/tableRow2" android:layout_height="wrap_content">
-            <Button android:layout_width="wrap_content" android:text="@string/playAudio" android:id="@+id/audioButton" android:layout_height="match_parent"></Button>
-            <Button android:layout_width="wrap_content" android:text="@string/showVideo" android:id="@+id/videoButton" android:layout_height="wrap_content"></Button>
-        </TableRow>
-    </TableLayout>
+    <ScrollView android:layout_height="fill_parent" android:layout_width="match_parent" android:id="@+id/scrollView1">
+        <LinearLayout android:id="@+id/linearLayout1" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
+            <ImageView 	android:layout_height="wrap_content" 
+            			android:layout_width="wrap_content" 
+            			android:id="@+id/imageView1"
+            			android:maxHeight="250dp"
+            			android:scaleType="centerCrop"
+            			android:adjustViewBounds="true"
+            			android:layout_gravity="center"
+            			>
+           	</ImageView>
+            <TextView android:text="TextView" android:id="@+id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+            <RelativeLayout android:layout_height="wrap_content" android:layout_width="fill_parent" android:id="@+id/relativeLayout1">
+                <Button android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/videoButton" android:text="@string/showVideo"></Button>
+                <Button android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_toRightOf="@id/videoButton" android:layout_alignTop="@id/videoButton" android:id="@+id/audioButton" android:text="@string/playAudio"></Button>
+            </RelativeLayout>
+        	
+        </LinearLayout>
+    </ScrollView>
+   
 
 </LinearLayout>

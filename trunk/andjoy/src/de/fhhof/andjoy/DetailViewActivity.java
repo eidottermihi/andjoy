@@ -5,6 +5,8 @@ import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import de.fhhof.andjoy.data.MediaInfo;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
