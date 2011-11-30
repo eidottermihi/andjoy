@@ -1,23 +1,14 @@
 package de.fhhof.andjoy;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.List;
-
-import org.jdom.Document;
-import org.jdom.Element;
-import org.jdom.JDOMException;
-import org.jdom.input.SAXBuilder;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
+import de.fhhof.andjoy.data.MediaInfo;
+import de.fhhof.andjoy.menu.MenuEntryAdapter;
 
 public class Menu extends Activity implements OnItemClickListener {
 

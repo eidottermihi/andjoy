@@ -1,4 +1,4 @@
-package de.fhhof.andjoy;
+package de.fhhof.andjoy.data;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -9,6 +9,9 @@ import org.jdom.Document;
 import org.jdom.Element;
 import org.jdom.JDOMException;
 import org.jdom.input.SAXBuilder;
+
+import de.fhhof.andjoy.R;
+import de.fhhof.andjoy.R.raw;
 
 import android.content.Context;
 import android.util.Log;
@@ -52,22 +55,6 @@ public class AllMedia {
 		this.mediaInfo = mediaInfo;
 	}
 
-	/**
-	 * Liefert die MediaInfo zum angegebenen Button. Wenn keine MediaInfo
-	 * vorhanden ist, liefert die Methode {@code null} zurück.
-	 * 
-	 * @param buttonId
-	 *            String - Button ID (Button Tag)
-	 * @return MediaInfo oder {@code null}
-	 */
-	public MediaInfo getMediaInfoFor(String buttonId) {
-		for (MediaInfo media : this.getMediaInfo()) {
-			if (media.getButtonName().equals(buttonId)) {
-				return media;
-			}
-		}
-		return null;
-	}
 
 	/**
 	 * Parst die XML, die alle Informationen zu den Medien enthält.
@@ -89,7 +76,6 @@ public class AllMedia {
 		List<MediaInfo> mediaList = new ArrayList<MediaInfo>();
 		for (Element element : elementList) {
 			MediaInfo media = new MediaInfo();
-			media.setButtonName(element.getAttributeValue("button"));
 			media.setText(element.getChildTextTrim("text"));
 			media.setVideoUrl(element.getChildTextTrim("video-url"));
 			media.setImageUrl(element.getChildTextTrim("image-url"));
