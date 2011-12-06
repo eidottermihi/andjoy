@@ -7,29 +7,42 @@
         			android:id="@+id/imageView1" 
         			android:src="@drawable/icon" 
         			android:layout_width="wrap_content"
+        			android:adjustViewBounds="true"
+        			android:scaleType="centerCrop"
+        			android:maxHeight="200dip"
+        			android:layout_centerHorizontal="true"
         			android:layout_alignParentTop="true"></ImageView>
-        			<LinearLayout 	android:id="@+id/linLay1"
+        <TableLayout	android:id="@+id/tabLay1"
         				android:layout_height="wrap_content"
         				android:layout_width="wrap_content"
-        				android:orientation="horizontal"
-        				android:layout_alignParentBottom="true">
-        	<Button android:layout_height="wrap_content" 
-        		android:layout_width="wrap_content" 
-        		android:id="@+id/videoButton" 
-        		android:text="@string/showVideo"></Button>
-        	<Button android:layout_height="wrap_content" 
-        		android:layout_width="wrap_content" 
-        		android:id="@+id/audioButton" 
-        		android:text="@string/playAudio"></Button>
-        </LinearLayout>
+        				android:layout_alignParentBottom="true"
+        				android:stretchColumns="*">
+        	<TableRow >
+        		<Button android:layout_height="wrap_content" 
+        				android:layout_width="wrap_content" 
+        				android:id="@+id/videoButton" 
+        				android:text="@string/showVideo"></Button>
+        		<Button android:layout_height="wrap_content" 
+        				android:layout_width="wrap_content" 
+        				android:id="@+id/audioButton" 
+        				android:text="@string/playAudio"></Button>
+        	</TableRow>
+        	
+        				
+        </TableLayout>
         <ScrollView android:id="@+id/scrollView1"
         			android:layout_width="wrap_content" 
         			android:layout_height="wrap_content" 
         			android:layout_below="@id/imageView1"
-        			android:layout_above="@id/linLay1"
+        			android:layout_above="@id/tabLay1"
         			>
-            <LinearLayout android:id="@+id/linearLayout1" android:layout_width="match_parent" android:layout_height="match_parent">
-                <TextView android:text="TextView" android:id="@+id/textView1" android:layout_height="wrap_content" android:layout_width="wrap_content"></TextView>
+            <LinearLayout 	android:id="@+id/linearLayout1" 
+            				android:layout_width="match_parent" 
+            				android:layout_height="match_parent">
+                <TextView 	android:text="TextView" 
+                			android:id="@+id/textView1" 
+                			android:layout_height="wrap_content" 
+                			android:layout_width="wrap_content"></TextView>
             </LinearLayout>
         </ScrollView>
         
