@@ -82,6 +82,8 @@ public class AllMedia {
 			media.setAudioUrl(element.getChildTextTrim("audio-url"));
 			media.setHeadLine(element.getChildTextTrim("headline"));
 			media.setButtonImage(element.getChildTextTrim("button-image"));
+			media.setTextVideo(element.getChildTextTrim("textVideo"));
+			media.setBackground(element.getChildTextTrim("background"));
 			mediaList.add(media);
 		}
 		this.setMediaInfo(mediaList);

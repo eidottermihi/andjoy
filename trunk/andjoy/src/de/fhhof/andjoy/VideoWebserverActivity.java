@@ -21,7 +21,7 @@ public class VideoWebserverActivity extends Activity {
 			VideoView myView = (VideoView) findViewById(R.id.videoView1);
 			TextView textview = (TextView) findViewById(R.id.textView2);
 			// Text aus Extras lesen
-			textview.setText(m1.getText());
+			textview.setText(m1.getTextVideo());
 			Log.v("VideoWebserverActivity", "Video-URL aus MediaInfo-Objekt: " + m1.getVideoUrl());
 			// Video-URL aus Extras lesen
 			myView.setVideoURI(Uri.parse(m1.getVideoUrl()));
