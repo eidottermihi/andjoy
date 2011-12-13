@@ -9,14 +9,15 @@ public class MediaInfo implements Serializable {
 	String text;
 	String headLine;
 	String textVideo;
-	String background;
+	String backgroundDetail;
+	String backgroundVideo;
 	private String buttonImage;
 
 	public MediaInfo() {
 	}
 
 	public MediaInfo(String videoUrl, String audioUrl, String imageUrl,
-			String textUrl, String headLine, String buttonImage, String textVideo, String background) {
+			String textUrl, String headLine, String buttonImage, String textVideo, String backgroundDetail) {
 		super();
 		this.videoUrl = videoUrl;
 		this.audioUrl = audioUrl;
@@ -25,10 +26,19 @@ public class MediaInfo implements Serializable {
 		this.headLine = headLine;
 		this.buttonImage = buttonImage;
 		this.textVideo = textVideo;
-		this.background = background;
+		this.backgroundDetail = backgroundDetail;
+		
 	}
 	
 	
+
+	public String getBackgroundVideo() {
+		return backgroundVideo;
+	}
+
+	public void setBackgroundVideo(String backgroundVideo) {
+		this.backgroundVideo = backgroundVideo;
+	}
 
 	public String getTextVideo() {
 		return textVideo;
@@ -38,12 +48,12 @@ public class MediaInfo implements Serializable {
 		this.textVideo = textVideo;
 	}
 
-	public String getBackground() {
-		return background;
+	public String getBackgroundDetail() {
+		return backgroundDetail;
 	}
 
-	public void setBackground(String background) {
-		this.background = background;
+	public void setBackgroundDetail(String backgroundDetail) {
+		this.backgroundDetail = backgroundDetail;
 	}
 
 	public String getVideoUrl() {
