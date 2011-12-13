@@ -1,5 +1,6 @@
 package de.fhhof.andjoy.menu;
 
+import de.fhhof.andjoy.data.Settings;
 import android.content.Context;
 import android.text.TextUtils.TruncateAt;
 import android.view.Gravity;
@@ -16,6 +17,7 @@ import android.widget.TextView;
 public class MenuEntryForAdapter extends LinearLayout {
 	private ImageView imageView;
 	private TextView textView;
+	private Settings settings;
 
 //	public MenuEntryForAdapter(Context context) {
 //		super(context);
@@ -23,6 +25,7 @@ public class MenuEntryForAdapter extends LinearLayout {
 	
 	public MenuEntryForAdapter(Context context, ImageView imageView, TextView textView) {
 		super(context);
+		this.settings = Settings.getInstance(context);
 		this.setImageView(imageView);
 		this.setTextView(textView);
 		this.setOrientation(LinearLayout.VERTICAL);
@@ -32,6 +35,9 @@ public class MenuEntryForAdapter extends LinearLayout {
 		this.textView.setSingleLine(true);
 		this.textView.setEllipsize(TruncateAt.MARQUEE);
 		this.textView.setSelected(true);
+		if(settings.getFontColor() != null){
+			this.textView.setTextColor(settings.getFontColor());
+		}
 		this.addView(imageView);
 		this.addView(textView);
 	}

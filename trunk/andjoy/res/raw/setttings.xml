@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+	<!-- Background der Menüseite: Entweder Verweis auf Image Ressource, oder Farbe in der Form #RRGGBB -->
+	<background-main>#F457AC</background-main>
+	<!-- Background der Menüseite: Entweder Verweis auf Image Ressource, oder Farbe in der Form #RRGGBB
+		 Wird nur verwendet, wenn kein spezieller Eintrag in mediainfo.xml vorhanden ist. -->
+	<background-detail>bg_wood</background-detail>
+	<background-video>#FF0000</background-video>
+	<!-- Farbe der Schrift im Hauptmenü, in der Form #RRBBGG (Bsp. #FFF034) -->
+	<font-color-main>#00FF00</font-color-main>
+	<font-color-detail>#F450FA</font-color-detail>
+	<font-color-video>#000000</font-color-video>	
+</settings>

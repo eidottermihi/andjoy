@@ -72,7 +72,6 @@ public class MenuEntryAdapter extends BaseAdapter {
 		}
 		
 		returnView.getTextView().setText(tempInfo.getHeadLine());
-		returnView.getTextView().setTextColor(Color.WHITE);
 //		returnView.setLayoutParams(new LinearLayout.LayoutParams(85,85));
 		returnView.setPadding(8, 8, 8, 8);	
 		return returnView;
