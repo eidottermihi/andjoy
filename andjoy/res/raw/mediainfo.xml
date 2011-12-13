@@ -8,7 +8,8 @@
 		<headline>Hirsch</headline>
 		<button-image>hirsch</button-image>
 		<textVideo>videoText</textVideo>
-		<background></background>
+		<backgroundDetail></backgroundDetail>
+		<backgroundVideo></backgroundVideo>
 	</media>
 	<media>
 		<video-url>http://h1930837.stratoserver.net:8080/LanCenter/video/testvideo.3gp</video-url>
@@ -18,7 +19,8 @@
 		<headline>Rebhuhn</headline>
 		<button-image>rebhuhn</button-image>
 		<textVideo>textVideo</textVideo>
-		<background></background>
+		<backgroundDetail></backgroundDetail>
+		<backgroundVideo></backgroundVideo>
 	</media>
 	<media>
 		<video-url>http://h1930837.stratoserver.net:8080/LanCenter/video/testvideo.3gp</video-url>
@@ -28,7 +30,8 @@
 		<headline>Wolf</headline>
 		<button-image>wolf</button-image>
 		<textVideo>textVideo</textVideo>
-		<background></background>
+		<backgroundDetail></backgroundDetail>
+		<backgroundVideo></backgroundVideo>
 	</media>
 	<media>
 		<video-url>http://h1930837.stratoserver.net:8080/LanCenter/video/testvideo.3gp</video-url>
@@ -38,6 +41,7 @@
 		<headline>Feldhase</headline>
 		<button-image>hase</button-image>
 		<textVideo>textVideo</textVideo>
-		<background></background>
+		<backgroundDetail></backgroundDetail>
+		<backgroundVideo></backgroundVideo>
 	</media>
 </mediainfo>
