@@ -5,8 +5,6 @@ import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-import de.fhhof.andjoy.data.MediaInfo;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
@@ -16,11 +14,15 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import de.fhhof.andjoy.data.MediaInfo;
+import de.fhhof.andjoy.data.Settings;
 
 public class DetailViewActivity extends Activity implements OnClickListener {
 	MediaInfo mediaInfo;
 	MediaPlayer audio;
+	Settings settings;
 
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -40,6 +42,21 @@ public class DetailViewActivity extends Activity implements OnClickListener {
 			// Text anzeigen
 			TextView tView = (TextView) findViewById(R.id.textView1);
 			tView.setText(mediaInfo.getText());
+			settings = Settings.getInstance(this);
+			if(settings.getFontColorDetail() != null){
+				tView.setTextColor(settings.getFontColorDetail());
+			}
+			// Hintergrundbild
+			LinearLayout linLay = (LinearLayout) findViewById(R.id.linearLayout1);
+			if(settings.getBackgroundDetail() instanceof Integer){
+				linLay.setBackgroundColor((Integer) settings.getBackgroundDetail());
+			} else if(settings.getBackgroundDetail() != null){
+				int id = this.getResources().getIdentifier((String) settings.getBackgroundDetail(), "drawable", "de.fhhof.andjoy");
+				if(id != 0){
+					linLay.setBackgroundResource(id);
+				}
+			}
+			
 		}
 	}
 

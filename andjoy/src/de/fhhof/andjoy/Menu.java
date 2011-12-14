@@ -28,9 +28,10 @@ public class Menu extends Activity implements OnItemClickListener {
 		Settings settings = Settings.getInstance(this);
 		if (settings.getBackgroundMain() instanceof Integer) {
 			gridView.setBackgroundColor((Integer)settings.getBackgroundMain());
-		} else {
+		} else if(settings.getBackgroundMain() != null) {
 			int id = this.getResources().getIdentifier((String) settings.getBackgroundMain(), "drawable", "de.fhhof.andjoy");
-			gridView.setBackgroundResource(id);
+			if(id != 0)
+				gridView.setBackgroundResource(id);
 		}
 		gridView.setAdapter(new MenuEntryAdapter(this));
 		gridView.setOnItemClickListener(this);
