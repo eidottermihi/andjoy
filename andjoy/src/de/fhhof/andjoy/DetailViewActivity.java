@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.URLConnection;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -39,8 +40,20 @@ public class DetailViewActivity extends Activity implements OnClickListener, Run
 		if (mediaInfo != null) {
 			setContentView(R.layout.detailview);
 			ImageView imgView = (ImageView) findViewById(R.id.imageView1);
-			Drawable image = getDrawable(mediaInfo.getImageUrl());
-			imgView.setImageDrawable(image);
+			// Drawable image = getDrawable(mediaInfo.getImageUrl());
+			URL url;
+			Drawable drawable = null;
+			try {
+				url = new URL(mediaInfo.getImageUrl());
+				URLConnection connection = url.openConnection();
+				connection.setUseCaches(true);
+				drawable = Drawable.createFromStream(connection.getInputStream(), "src");
+			} catch (MalformedURLException e) {
+			} catch (IOException e) {
+			}
+			if(drawable != null){
+				imgView.setImageDrawable(drawable);
+			}
 			audioButton = (Button) findViewById(R.id.audioButton);
 			
 			Thread th = new Thread(this);
