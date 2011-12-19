@@ -10,19 +10,28 @@ import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import de.fhhof.andjoy.data.MediaInfo;
 import de.fhhof.andjoy.data.Settings;
 
-public class DetailViewActivity extends Activity implements OnClickListener {
+public class DetailViewActivity extends Activity implements OnClickListener, Runnable {
 	MediaInfo mediaInfo;
 	MediaPlayer audio;
 	Settings settings;
+	Button audioButton;
+	private Handler handler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+                audioButton.setEnabled(true);
+        }
+};
 
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -32,8 +41,11 @@ public class DetailViewActivity extends Activity implements OnClickListener {
 			ImageView imgView = (ImageView) findViewById(R.id.imageView1);
 			Drawable image = getDrawable(mediaInfo.getImageUrl());
 			imgView.setImageDrawable(image);
+			audioButton = (Button) findViewById(R.id.audioButton);
+			
+			Thread th = new Thread(this);
+			th.start();
 
-			setAudio();
 
 			Button button1 = (Button) findViewById(R.id.audioButton);
 			button1.setOnClickListener(this);
@@ -46,8 +58,25 @@ public class DetailViewActivity extends Activity implements OnClickListener {
 			if(settings.getFontColorDetail() != null){
 				tView.setTextColor(settings.getFontColorDetail());
 			}
-			// Hintergrundbild
-			LinearLayout linLay = (LinearLayout) findViewById(R.id.linearLayout1);
+			setBackground();
+			
+		}
+	}
+
+	private void setBackground() {
+		RelativeLayout linLay = (RelativeLayout) findViewById(R.id.relativeLayout1);
+		// Auf Eintrag in mediainfo.xml prüfen
+		// Entweder Farbe oder Bild als Hintergrund setzen
+		if(!mediaInfo.getBackgroundDetail().equals("")){			
+			if(mediaInfo.getBackgroundDetail() instanceof Integer){
+				linLay.setBackgroundColor((Integer) mediaInfo.getBackgroundDetail());
+			} else if(mediaInfo.getBackgroundDetail() != null){
+				int id = this.getResources().getIdentifier((String) mediaInfo.getBackgroundDetail(), "drawable", "de.fhhof.andjoy");
+				if(id != 0){
+					linLay.setBackgroundResource(id);
+				}
+			}
+		} else if(!settings.getBackgroundDetail().equals("")) {
 			if(settings.getBackgroundDetail() instanceof Integer){
 				linLay.setBackgroundColor((Integer) settings.getBackgroundDetail());
 			} else if(settings.getBackgroundDetail() != null){
@@ -56,13 +85,13 @@ public class DetailViewActivity extends Activity implements OnClickListener {
 					linLay.setBackgroundResource(id);
 				}
 			}
-			
 		}
+		
 	}
 
 	/**
 	 * Generiert das MediaPlayer Objekt in der Klassenvariable (MediaPlayer)audio
-	 * und bereitet es zum abspielen vor
+	 * und bereitet es zum abspielen vor.
 	 */
 	private void setAudio() {
 		audio = new MediaPlayer();
@@ -123,4 +152,23 @@ public class DetailViewActivity extends Activity implements OnClickListener {
 		}
 
 	}
+
+	public void run() {
+		setAudio();
+		handler.sendEmptyMessage(0);
+	}
+
+	@Override
+	protected void onPause() {
+		audio.release();
+		super.onPause();
+	}
+
+	@Override
+	protected void onStop() {
+		audio.release();
+		super.onStop();
+	}
+	
+	
 }

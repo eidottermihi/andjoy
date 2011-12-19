@@ -10,14 +10,21 @@ import org.jdom.Element;
 import org.jdom.JDOMException;
 import org.jdom.input.SAXBuilder;
 
-import de.fhhof.andjoy.R;
-import de.fhhof.andjoy.R.raw;
-
 import android.content.Context;
 import android.util.Log;
+import de.fhhof.andjoy.R;
 
 public class AllMedia {
 
+	private static final String TEXT = "text";
+	private static final String VIDEO_URL = "video-url";
+	private static final String IMAGE_URL = "image-url";
+	private static final String AUDIO_URL = "audio-url";
+	private static final String HEADLINE = "headline";
+	private static final String BUTTON_IMAGE = "button-image";
+	private static final String TEXT_VIDEO = "text-video";
+	private static final String BACKGROUND_DETAIL = "background-detail";
+	private static final String BACKGROUND_VIDEO = "background-video";
 	/**
 	 * Privates Klassenattribut, wird beim erstmaligen Gebrauch (nicht beim
 	 * Laden) der Klasse erzeugt
@@ -76,15 +83,15 @@ public class AllMedia {
 		List<MediaInfo> mediaList = new ArrayList<MediaInfo>();
 		for (Element element : elementList) {
 			MediaInfo media = new MediaInfo();
-			media.setText(element.getChildTextTrim("text"));
-			media.setVideoUrl(element.getChildTextTrim("video-url"));
-			media.setImageUrl(element.getChildTextTrim("image-url"));
-			media.setAudioUrl(element.getChildTextTrim("audio-url"));
-			media.setHeadLine(element.getChildTextTrim("headline"));
-			media.setButtonImage(element.getChildTextTrim("button-image"));
-			media.setTextVideo(element.getChildTextTrim("textVideo"));
-			media.setBackgroundDetail(element.getChildTextTrim("backgroundDetail"));
-			media.setBackgroundVideo(element.getChildTextTrim("backgroundVideo"));
+			media.setText(element.getChildTextTrim(TEXT));
+			media.setVideoUrl(element.getChildTextTrim(VIDEO_URL));
+			media.setImageUrl(element.getChildTextTrim(IMAGE_URL));
+			media.setAudioUrl(element.getChildTextTrim(AUDIO_URL));
+			media.setHeadLine(element.getChildTextTrim(HEADLINE));
+			media.setButtonImage(element.getChildTextTrim(BUTTON_IMAGE));
+			media.setTextVideo(element.getChildTextTrim(TEXT_VIDEO));
+			media.setBackgroundDetail(element.getChildTextTrim(BACKGROUND_DETAIL));
+			media.setBackgroundVideo(element.getChildTextTrim(BACKGROUND_VIDEO));
 			mediaList.add(media);
 		}
 		this.setMediaInfo(mediaList);

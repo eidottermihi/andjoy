@@ -7,9 +7,9 @@
 		<text>Die Hirsche (Cervidae) oder Geweihträger sind eine Säugetierfamilie aus der Ordnung der Paarhufer (Artiodactyla). Die Familie umfasst rund 45 Arten, von denen unter anderem der Rothirsch, der Damhirsch, das Reh, das Ren und der Elch auch in Europa verbreitet sind. Markantestes Kennzeichen der Hirsche sind die an Gestalt variantenreichen, meist nur von den Männchen getragenen Geweihe, die jährlich abgeworfen und neu gebildet werden.</text>
 		<headline>Hirsch</headline>
 		<button-image>hirsch</button-image>
-		<textVideo>videoText</textVideo>
-		<backgroundDetail></backgroundDetail>
-		<backgroundVideo></backgroundVideo>
+		<text-video>Crazy Frog (deutsch: „Bekloppter Frosch“) ist eine Animationsfigur, die im gleichnamigen Werbespot für einen Klingelton der Firma Jamba! vorkommt.</text-video>
+		<background-detail></background-detail>
+		<background-video></background-video>
 	</media>
 	<media>
 		<video-url>http://h1930837.stratoserver.net:8080/LanCenter/video/testvideo.3gp</video-url>
@@ -18,9 +18,9 @@
 		<text>Das Rebhuhn (Perdix perdix) ist eine Vogelart aus der Ordnung der Hühnervögel (Galliformes). Rebhühner bewohnen Steppen- und Heidelandschaften in weiten Teilen Europas und Asiens. Sie ernähren sich überwiegend von Sämereien, Wildkräutern und Getreidekörnern. Während der weltweite Bestand von der IUCN als nicht gefährdet eingestuft wird, gilt der Bestand in Europa als gefährdet, da er zwischen 1970 und 1990 stark zurückgegangen ist.</text>
 		<headline>Rebhuhn</headline>
 		<button-image>rebhuhn</button-image>
-		<textVideo>textVideo</textVideo>
-		<backgroundDetail></backgroundDetail>
-		<backgroundVideo></backgroundVideo>
+		<text-video>Crazy Frog (deutsch: „Bekloppter Frosch“) ist eine Animationsfigur, die im gleichnamigen Werbespot für einen Klingelton der Firma Jamba! vorkommt.</text-video>
+		<background-detail></background-detail>
+		<background-video></background-video>
 	</media>
 	<media>
 		<video-url>http://h1930837.stratoserver.net:8080/LanCenter/video/testvideo.3gp</video-url>
@@ -29,9 +29,9 @@
 		<text>Der Wolf (Canis lupus) ist eine Raubtierart aus der Familie der Hunde (Canidae). Wölfe leben und jagen im Rudel, Hauptbeute sind mittelgroße bis große Huftiere. Die Art war früher in ganz Europa verbreitet, wurde jedoch in West- und Mitteleuropa weitgehend ausgerottet. Deutschland wurde erst Ende der 1990er Jahre wieder besiedelt, im Jahr 2000 wurden erstmals Welpen nachgewiesen. Wölfe haben schon frühzeitig Eingang in die Mythen und Märchen vieler Völker gefunden, sie zählen daher zu den bekanntesten Raubtieren.</text>
 		<headline>Wolf</headline>
 		<button-image>wolf</button-image>
-		<textVideo>textVideo</textVideo>
-		<backgroundDetail></backgroundDetail>
-		<backgroundVideo></backgroundVideo>
+		<text-video>Crazy Frog (deutsch: „Bekloppter Frosch“) ist eine Animationsfigur, die im gleichnamigen Werbespot für einen Klingelton der Firma Jamba! vorkommt.</text-video>
+		<background-detail></background-detail>
+		<background-video></background-video>
 	</media>
 	<media>
 		<video-url>http://h1930837.stratoserver.net:8080/LanCenter/video/testvideo.3gp</video-url>
@@ -40,8 +40,8 @@
 		<text>Der Feldhase (Lepus europaeus) ist ein Säugetier aus der Familie der Hasen (Leporidae). Die Art besiedelt offene und halboffene Landschaften. Das natürliche Verbreitungsgebiet umfasst weite Teile der südwestlichen Paläarktis; durch zahlreiche Einbürgerungen kommt die Art heute jedoch auf fast allen Kontinenten vor. Aufgrund der starken Intensivierung der Landwirtschaft ist der Bestand des Feldhasen in vielen Regionen Europas rückläufig.</text>
 		<headline>Feldhase</headline>
 		<button-image>hase</button-image>
-		<textVideo>textVideo</textVideo>
-		<backgroundDetail></backgroundDetail>
-		<backgroundVideo></backgroundVideo>
+		<text-video>Crazy Frog (deutsch: „Bekloppter Frosch“) ist eine Animationsfigur, die im gleichnamigen Werbespot für einen Klingelton der Firma Jamba! vorkommt.</text-video>
+		<background-detail></background-detail>
+		<background-video></background-video>
 	</media>
 </mediainfo>

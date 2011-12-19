@@ -7,7 +7,7 @@
 	<!-- Background derDetail- und Videoactivity: Entweder Verweis auf Image Ressource, oder Farbe in der Form #RRGGBB
 		 Wird nur verwendet, wenn kein spezieller Eintrag in mediainfo.xml vorhanden ist. -->
 	<background-detail></background-detail>
-	<background-video></background-video>
+	<background-video>bg_wood</background-video>
 	
 	
 	<!-- Schriftfarben, in der Form #RRBBGG (Bsp. #FFF034) -->
