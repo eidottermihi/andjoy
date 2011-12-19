@@ -9,8 +9,8 @@ public class MediaInfo implements Serializable {
 	String text;
 	String headLine;
 	String textVideo;
-	String backgroundDetail;
-	String backgroundVideo;
+	Object backgroundDetail;
+	Object backgroundVideo;
 	private String buttonImage;
 
 	public MediaInfo() {
@@ -32,11 +32,11 @@ public class MediaInfo implements Serializable {
 	
 	
 
-	public String getBackgroundVideo() {
+	public Object getBackgroundVideo() {
 		return backgroundVideo;
 	}
 
-	public void setBackgroundVideo(String backgroundVideo) {
+	public void setBackgroundVideo(Object backgroundVideo) {
 		this.backgroundVideo = backgroundVideo;
 	}
 
@@ -48,11 +48,11 @@ public class MediaInfo implements Serializable {
 		this.textVideo = textVideo;
 	}
 
-	public String getBackgroundDetail() {
+	public Object getBackgroundDetail() {
 		return backgroundDetail;
 	}
 
-	public void setBackgroundDetail(String backgroundDetail) {
+	public void setBackgroundDetail(Object backgroundDetail) {
 		this.backgroundDetail = backgroundDetail;
 	}
 
