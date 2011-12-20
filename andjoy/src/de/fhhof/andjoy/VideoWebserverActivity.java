@@ -5,20 +5,23 @@ import java.io.IOException;
 import android.app.Activity;
 import android.graphics.Rect;
 import android.media.MediaPlayer;
+import android.media.MediaPlayer.OnPreparedListener;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Surface;
 import android.view.SurfaceHolder;
 import android.view.SurfaceHolder.Callback;
+import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.MediaController;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.VideoView;
 import de.fhhof.andjoy.data.MediaInfo;
 import de.fhhof.andjoy.data.Settings;
 
-public class VideoWebserverActivity extends Activity {
+public class VideoWebserverActivity extends Activity implements OnPreparedListener {
 	Settings settings;
 	MediaInfo mediaInfo;
 	
@@ -45,9 +48,11 @@ public class VideoWebserverActivity extends Activity {
 			setBackground();
 			Log.v("VideoWebserverActivity", "Video-URL aus MediaInfo-Objekt: " + mediaInfo.getVideoUrl());
 			// Video-URL aus Extras lesen
+			myView.setOnPreparedListener(this);
 			myView.setVideoURI(Uri.parse(mediaInfo.getVideoUrl()));
 			MediaController mediaController = new MediaController(this);
 			myView.setMediaController(mediaController);
+			myView.requestFocus();
 			myView.start();
 		} 
 	}
@@ -75,5 +80,12 @@ public class VideoWebserverActivity extends Activity {
 				}
 			}
 		}
+	}
+
+	public void onPrepared(MediaPlayer mp) {
+		ProgressBar progressBar = (ProgressBar)findViewById(R.id.progressBar1);
+		progressBar.setVisibility(View.GONE);
+
+		
 	}
 }
