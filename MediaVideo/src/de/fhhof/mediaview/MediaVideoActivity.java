@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceHolder.Callback;
 import android.view.SurfaceView;
+import android.widget.MediaController;
 
 public class MediaVideoActivity extends Activity implements Callback, OnBufferingUpdateListener, OnCompletionListener, OnPreparedListener, OnVideoSizeChangedListener {
 	
@@ -23,6 +24,7 @@ public class MediaVideoActivity extends Activity implements Callback, OnBufferin
 	private boolean mIsVideoReadyToBePlayed;
 	private boolean mIsVideoSizeKnown;
 	private MediaPlayer mMediaPlayer;
+	private MediaController mMediaController;
 	
     /** Called when the activity is first created. */
     @Override
@@ -34,7 +36,6 @@ public class MediaVideoActivity extends Activity implements Callback, OnBufferin
         holder.addCallback(this);
         holder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
         extras = getIntent().getExtras();
-        
     }
 
 	@Override
@@ -53,7 +54,7 @@ public class MediaVideoActivity extends Activity implements Callback, OnBufferin
 			mMediaPlayer = new MediaPlayer();
 			mMediaPlayer.setDataSource("http://h1930837.stratoserver.net:8080/LanCenter/video/testvideo.3gp");
 			mMediaPlayer.setDisplay(holder);
-			mMediaPlayer.prepare();
+			mMediaPlayer.prepareAsync();
 			mMediaPlayer.setOnBufferingUpdateListener(this);
 			mMediaPlayer.setOnCompletionListener(this);
 			mMediaPlayer.setOnPreparedListener(this);
