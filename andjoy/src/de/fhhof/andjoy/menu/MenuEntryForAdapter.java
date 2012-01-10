@@ -1,7 +1,9 @@
 package de.fhhof.andjoy.menu;
 
 import de.fhhof.andjoy.data.Settings;
+import android.R.color;
 import android.content.Context;
+import android.graphics.Color;
 import android.text.TextUtils.TruncateAt;
 import android.view.Gravity;
 import android.widget.ImageView;
@@ -38,6 +40,10 @@ public class MenuEntryForAdapter extends LinearLayout {
 		if(settings.getFontColor() != null){
 			this.textView.setTextColor(settings.getFontColor());
 		}
+		// Schatten des Textes
+		this.textView.setShadowLayer(2, 2, 2, Color.BLACK);
+		
+		
 		this.addView(imageView);
 		this.addView(textView);
 	}
