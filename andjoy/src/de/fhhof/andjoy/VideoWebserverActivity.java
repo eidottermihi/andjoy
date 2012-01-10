@@ -1,17 +1,11 @@
 package de.fhhof.andjoy;
 
-import java.io.IOException;
-
 import android.app.Activity;
-import android.graphics.Rect;
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnPreparedListener;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Surface;
-import android.view.SurfaceHolder;
-import android.view.SurfaceHolder.Callback;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.MediaController;
@@ -21,6 +15,11 @@ import android.widget.VideoView;
 import de.fhhof.andjoy.data.MediaInfo;
 import de.fhhof.andjoy.data.Settings;
 
+
+/**
+ * Klasse VideoWebserverActivity gibt ein Video mit einer kurzen 
+ * Beschreibung wieder. 
+ */
 public class VideoWebserverActivity extends Activity implements OnPreparedListener {
 	Settings settings;
 	MediaInfo mediaInfo;

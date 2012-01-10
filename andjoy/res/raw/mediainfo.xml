@@ -8,7 +8,9 @@
 		<headline>Hirsch</headline>
 		<button-image>hirsch</button-image>
 		<text-video>Crazy Frog (deutsch: „Bekloppter Frosch“) ist eine Animationsfigur, die im gleichnamigen Werbespot für einen Klingelton der Firma Jamba! vorkommt.</text-video>
+		<!-- Hintergrund der Detailseite. Entweder Farbe der Form ##RRGGBB oder Hintergrundbild. -->
 		<background-detail></background-detail>
+		<!-- Hintergrund der Videoseite. Entweder Farbe der Form ##RRGGBB oder Hintergrundbild. -->
 		<background-video></background-video>
 	</media>
 	<media>
