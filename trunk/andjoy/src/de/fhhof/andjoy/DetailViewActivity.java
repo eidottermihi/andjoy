@@ -22,6 +22,10 @@ import android.widget.TextView;
 import de.fhhof.andjoy.data.MediaInfo;
 import de.fhhof.andjoy.data.Settings;
 
+/**
+ * Klasse DetailViewActivity zeigt ein Bild, Text und Buttons für Audio und
+ * Video an.
+ */
 public class DetailViewActivity extends Activity implements OnClickListener, Runnable {
 	MediaInfo mediaInfo;
 	MediaPlayer audio;
@@ -40,7 +44,7 @@ public class DetailViewActivity extends Activity implements OnClickListener, Run
 		if (mediaInfo != null) {
 			setContentView(R.layout.detailview);
 			ImageView imgView = (ImageView) findViewById(R.id.imageView1);
-			// Drawable image = getDrawable(mediaInfo.getImageUrl());
+			// Imagecaching
 			URL url;
 			Drawable drawable = null;
 			try {
@@ -75,7 +79,10 @@ public class DetailViewActivity extends Activity implements OnClickListener, Run
 			
 		}
 	}
-
+	
+	/**
+	 * Hintergrund der Aktivität konfigurieren.
+	 */
 	private void setBackground() {
 		RelativeLayout linLay = (RelativeLayout) findViewById(R.id.relativeLayout1);
 		// Auf Eintrag in mediainfo.xml prüfen

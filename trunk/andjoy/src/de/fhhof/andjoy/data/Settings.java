@@ -15,6 +15,10 @@ import android.graphics.Color;
 import android.util.Log;
 import de.fhhof.andjoy.R;
 
+/**
+ * Singleton-Klasse Settings hält alle Informationen zu allgemeinen 
+ * Einstellungen vor.
+ */
 public class Settings {
 
 	private static final String FARBE_REGEX = "\\#[0-9a-fA-F]{6}";

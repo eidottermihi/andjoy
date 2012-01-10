@@ -2,6 +2,9 @@ package de.fhhof.andjoy.data;
 
 import java.io.Serializable;
 
+/**
+ * Klasse MediaInfo stellt Informationen zu jedem Tier usw. bereit.
+ */
 public class MediaInfo implements Serializable {
 	String videoUrl;
 	String audioUrl;

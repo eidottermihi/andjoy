@@ -14,6 +14,9 @@ import android.content.Context;
 import android.util.Log;
 import de.fhhof.andjoy.R;
 
+/**
+ * Singleton-Klasse, die die Medieninformationen vorhält.
+ */
 public class AllMedia {
 
 	private static final String TEXT = "text";

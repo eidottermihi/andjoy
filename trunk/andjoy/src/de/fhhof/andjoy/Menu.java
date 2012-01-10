@@ -11,6 +11,9 @@ import de.fhhof.andjoy.data.MediaInfo;
 import de.fhhof.andjoy.data.Settings;
 import de.fhhof.andjoy.menu.MenuEntryAdapter;
 
+/**
+ * Klasse Menu ist die Einstiegsaktivität der Anwendung.
+ */
 public class Menu extends Activity implements OnItemClickListener {
 
 	public void onCreate(Bundle savedInstanceState) {
@@ -40,6 +43,7 @@ public class Menu extends Activity implements OnItemClickListener {
 	
 	/**
 	 * Click-Listener für alle Items der GridView.
+	 * Ruft die Detailseite auf.
 	 */
 	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 		MediaInfo m = (MediaInfo) parent.getItemAtPosition(position);
