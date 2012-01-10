@@ -11,7 +11,7 @@
 	
 	
 	<!-- Schriftfarben, in der Form #RRBBGG (Bsp. #FFF034) -->
-	<font-color-main>#609B4B</font-color-main>
-	<font-color-detail>#609B4B</font-color-detail>
-	<font-color-video>#609B4B</font-color-video>	
+	<font-color-main>#FFFFFF</font-color-main>
+	<font-color-detail>#FFFFFF</font-color-detail>
+	<font-color-video>#FFFFFF</font-color-video>	
 </settings>
