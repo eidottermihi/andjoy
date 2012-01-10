@@ -46,4 +46,15 @@
 		<background-detail></background-detail>
 		<background-video></background-video>
 	</media>
+	<media>
+		<video-url>http://h1930837.stratoserver.net:8080/LanCenter/video/testvideo.3gp</video-url>
+		<audio-url>http://h1930837.stratoserver.net:8080/LanCenter/audio/testAudio.mp3</audio-url>
+		<image-url>http://upload.wikimedia.org/wikipedia/commons/9/9e/Ours_brun_parcanimalierpyrenees_1.jpg</image-url>
+		<text>Der Braunbär (Ursus arctos) ist eine Säugetierart aus der Familie der Bären (Ursidae). Er kommt in mehreren Unterarten – darunter Europäischer Braunbär (U. a. arctos), Grizzlybär (U. a. horribilis) und Kodiakbär (U. a. middendorffi) – in Eurasien und Nordamerika vor. Als eines der größten an Land lebenden Raubtiere der Erde spielt er in zahlreichen Mythen und Sagen eine wichtige Rolle, gleichzeitig wurde er als (zumindest vermeintlicher) Nahrungskonkurrent und potenzieller Gefährder des Menschen vielerorts dezimiert oder ausgerottet. So gibt es in West- und Mitteleuropa nur mehr Reliktpopulationen. Innerhalb des deutschen Sprachraums lebt nur in Österreich dauerhaft eine kleine Gruppe, in anderen Regionen des Alpenraums wandern gelegentlich Exemplare umher.</text>
+		<headline>Braunbär</headline>
+		<button-image>braunbaer</button-image>
+		<text-video>Crazy Frog (deutsch: „Bekloppter Frosch“) ist eine Animationsfigur, die im gleichnamigen Werbespot für einen Klingelton der Firma Jamba! vorkommt.</text-video>
+		<background-detail></background-detail>
+		<background-video></background-video>
+	</media>
 </mediainfo>
