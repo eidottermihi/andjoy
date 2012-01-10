@@ -1,7 +1,5 @@
 package de.fhhof.andjoy.menu;
 
-import de.fhhof.andjoy.data.Settings;
-import android.R.color;
 import android.content.Context;
 import android.graphics.Color;
 import android.text.TextUtils.TruncateAt;
@@ -9,6 +7,7 @@ import android.view.Gravity;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import de.fhhof.andjoy.data.Settings;
 
 /**
  * Repräsentiert einen Menüeintrag. Dieser setzt sich aus einem Bild (ImageView) oben und

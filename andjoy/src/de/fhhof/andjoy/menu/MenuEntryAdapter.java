@@ -1,15 +1,14 @@
 package de.fhhof.andjoy.menu;
 
-import de.fhhof.andjoy.data.AllMedia;
-import de.fhhof.andjoy.data.MediaInfo;
 import android.content.Context;
-import android.graphics.Color;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import de.fhhof.andjoy.data.AllMedia;
+import de.fhhof.andjoy.data.MediaInfo;
 
 /**
  * Adapter für die Menüeinträge. Datenquelle des Adapters ist eine Instanz
@@ -57,7 +56,6 @@ public class MenuEntryAdapter extends BaseAdapter {
 			returnView = (MenuEntryForAdapter) convertView;
 						
 		}
-//		returnView.getImageView().setScaleType(ImageView.ScaleType.FIT_XY);
 		returnView.getImageView().setAdjustViewBounds(true);
 		returnView.getImageView().setMaxHeight(100);
 		returnView.getImageView().setMinimumHeight(100);
@@ -72,7 +70,6 @@ public class MenuEntryAdapter extends BaseAdapter {
 		}
 		
 		returnView.getTextView().setText(tempInfo.getHeadLine());
-//		returnView.setLayoutParams(new LinearLayout.LayoutParams(85,85));
 		returnView.setPadding(8, 8, 8, 8);	
 		return returnView;
 	}
