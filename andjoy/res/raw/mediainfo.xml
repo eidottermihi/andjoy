@@ -57,4 +57,147 @@
 		<background-detail></background-detail>
 		<background-video></background-video>
 	</media>
+	<media>
+		<video-url>http://h1930837.stratoserver.net:8080/LanCenter/video/testvideo.3gp</video-url>
+		<audio-url>http://h1930837.stratoserver.net:8080/LanCenter/audio/testAudio.mp3</audio-url>
+		<image-url>http://upload.wikimedia.org/wikipedia/commons/4/44/Mustela.erminea.jpg</image-url>
+		<text>Die Marder (Mustelidae) sind eine Familie hundeartiger Raubtiere (Canoidea). Während zur Familie der Marder unter anderem auch Otter, Dachse, Iltisse und Wiesel gehören, sind in der Umgangssprache mit „den Mardern“ meistens die Echten Marder (Martes) – unter anderem mit Stein- und Baummarder – gemeint. Die Skunks oder Stinktiere, die früher ebenfalls zu den Mardern gerechnet wurden, werden heute meist als eigene Familie betrachtet.</text>
+		<headline>Marder</headline>
+		<button-image>marder</button-image>
+		<text-video>Crazy Frog (deutsch: „Bekloppter Frosch“) ist eine Animationsfigur, die im gleichnamigen Werbespot für einen Klingelton der Firma Jamba! vorkommt.</text-video>
+		<background-detail></background-detail>
+		<background-video></background-video>
+	</media>
+	<media>
+		<video-url>http://h1930837.stratoserver.net:8080/LanCenter/video/testvideo.3gp</video-url>
+		<audio-url>http://h1930837.stratoserver.net:8080/LanCenter/audio/testAudio.mp3</audio-url>
+		<image-url>http://upload.wikimedia.org/wikipedia/commons/7/77/Big-eared-townsend-fledermaus.jpg</image-url>
+		<text>Die Fledermäuse (Microchiroptera) sind eine Säugetiergruppe, die zusammen mit den Flughunden (Megachiroptera) die Ordnung der Fledertiere (Chiroptera) bilden. Zu dieser Ordnung gehören die einzigen Säugetiere und neben den Vögeln die einzigen Wirbeltiere, die aktiv fliegen können. Weltweit gibt es rund 900 Fledermausarten.</text>
+		<headline>Fledermaus</headline>
+		<button-image>fledermaus</button-image>
+		<text-video>Crazy Frog (deutsch: „Bekloppter Frosch“) ist eine Animationsfigur, die im gleichnamigen Werbespot für einen Klingelton der Firma Jamba! vorkommt.</text-video>
+		<background-detail></background-detail>
+		<background-video></background-video>
+	</media>
+	<media>
+		<video-url>http://h1930837.stratoserver.net:8080/LanCenter/video/testvideo.3gp</video-url>
+		<audio-url>http://h1930837.stratoserver.net:8080/LanCenter/audio/testAudio.mp3</audio-url>
+		<image-url>http://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Mustela_nivalis_-British_Wildlife_Centre-4.jpg/562px-Mustela_nivalis_-British_Wildlife_Centre-4.jpg</image-url>
+		<text>Das Mauswiesel (Mustela nivalis), auch Zwerg- oder Kleinwiesel oder volkstümlich Hermännchen genannt, ist eine Raubtierart aus der Familie der Marder (Mustelidae). Neben dem Hermelin ist es die zweite in Mitteleuropa heimische Art der Wiesel.</text>
+		<headline>Mauswiesel</headline>
+		<button-image>mauswiesel</button-image>
+		<text-video>Crazy Frog (deutsch: „Bekloppter Frosch“) ist eine Animationsfigur, die im gleichnamigen Werbespot für einen Klingelton der Firma Jamba! vorkommt.</text-video>
+		<background-detail></background-detail>
+		<background-video></background-video>
+	</media>
+	<media>
+		<video-url>http://h1930837.stratoserver.net:8080/LanCenter/video/testvideo.3gp</video-url>
+		<audio-url>http://h1930837.stratoserver.net:8080/LanCenter/audio/testAudio.mp3</audio-url>
+		<image-url>http://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Fischotter%2C_Lutra_Lutra.JPG/640px-Fischotter%2C_Lutra_Lutra.JPG</image-url>
+		<text>Der Fischotter (Lutra lutra) ist ein an das Wasserleben angepasster Marder und zählt zu den besten Schwimmern unter den Landraubtieren. Er kommt in fast ganz Europa vor und wird einschließlich Schwanz etwa 130 Zentimeter lang. Eine eindeutigere Bezeichnung für diese Art ist Eurasischer Fischotter, da es in der Gruppe der Otter noch weitere Arten gibt, die Fischotter heißen, beispielsweise den Indischen oder die Amerikanischen Fischotter.</text>
+		<headline>Fischotter</headline>
+		<button-image>fischotter</button-image>
+		<text-video>Crazy Frog (deutsch: „Bekloppter Frosch“) ist eine Animationsfigur, die im gleichnamigen Werbespot für einen Klingelton der Firma Jamba! vorkommt.</text-video>
+		<background-detail></background-detail>
+		<background-video></background-video>
+	</media>
+	<media>
+		<video-url>http://h1930837.stratoserver.net:8080/LanCenter/video/testvideo.3gp</video-url>
+		<audio-url>http://h1930837.stratoserver.net:8080/LanCenter/audio/testAudio.mp3</audio-url>
+		<image-url>http://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Strix-varia-005-crop.jpg/480px-Strix-varia-005-crop.jpg</image-url>
+		<text>Der Streifenkauz (Strix varia) ist eine große Eulenart aus der Familie der Eigentlichen Eulen (Strigidae). Das stark zergliederte Verbreitungsgebiet umfasst große Teile Nordamerikas vom Südosten Alaskas nach Osten bis Nova Scotia und nach Süden bis Florida und bis zur Südspitze Mexikos. Die Tiere bewohnen alte Nadel- und Mischwälder, aber auch offenere bewaldete Landschaften, durch Holzentnahme aufgelichtete Wälder und lokal auch größere Parkanlagen mit altem Baumbestand. Die Nahrung besteht überwiegend aus kleinen Säugetieren, daneben fressen Streifenkäuze auch Vögel, andere kleine Wirbeltiere sowie Wirbellose. Der Weltbestand und das Verbreitungsgebiet sind sehr groß und der Bestand hat in den letzten 40 Jahren stark zugenommen, die IUCN stuft die Art daher als ungefährdet ("least concern") ein.</text>
+		<headline>Streifenkauz</headline>
+		<button-image>streifenkauz</button-image>
+		<text-video>Crazy Frog (deutsch: „Bekloppter Frosch“) ist eine Animationsfigur, die im gleichnamigen Werbespot für einen Klingelton der Firma Jamba! vorkommt.</text-video>
+		<background-detail></background-detail>
+		<background-video></background-video>
+	</media>
+	<media>
+		<video-url>http://h1930837.stratoserver.net:8080/LanCenter/video/testvideo.3gp</video-url>
+		<audio-url>http://h1930837.stratoserver.net:8080/LanCenter/audio/testAudio.mp3</audio-url>
+		<image-url>http://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/European_Wildcat_Nationalpark_Bayerischer_Wald_02.jpg/640px-European_Wildcat_Nationalpark_Bayerischer_Wald_02.jpg</image-url>
+		<text>Die Wildkatze (Felis silvestris) ist eine Art innerhalb der Familie der Katzen, die in verschiedenen Unterarten in Europa, Afrika, Westasien, Zentralasien bis nach Indien heimisch ist. Da sie zu den am weitesten verbreiteten Katzen gehört, wird sie in der Roten Liste der IUCN seit 2002 als nicht gefährdet (Least Concern) geführt. Die afrikanische Wildkatze oder Falbkatze ist die Stammform der Hauskatze.</text>
+		<headline>Wildkatze</headline>
+		<button-image>wildkatze</button-image>
+		<text-video>Crazy Frog (deutsch: „Bekloppter Frosch“) ist eine Animationsfigur, die im gleichnamigen Werbespot für einen Klingelton der Firma Jamba! vorkommt.</text-video>
+		<background-detail></background-detail>
+		<background-video></background-video>
+	</media>
+	<media>
+		<video-url>http://h1930837.stratoserver.net:8080/LanCenter/video/testvideo.3gp</video-url>
+		<audio-url>http://h1930837.stratoserver.net:8080/LanCenter/audio/testAudio.mp3</audio-url>
+		<image-url>http://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/European_Wildcat_Nationalpark_Bayerischer_Wald_02.jpg/640px-European_Wildcat_Nationalpark_Bayerischer_Wald_02.jpg</image-url>
+		<text>Die Wildkatze (Felis silvestris) ist eine Art innerhalb der Familie der Katzen, die in verschiedenen Unterarten in Europa, Afrika, Westasien, Zentralasien bis nach Indien heimisch ist. Da sie zu den am weitesten verbreiteten Katzen gehört, wird sie in der Roten Liste der IUCN seit 2002 als nicht gefährdet (Least Concern) geführt. Die afrikanische Wildkatze oder Falbkatze ist die Stammform der Hauskatze.</text>
+		<headline>Wildkatze</headline>
+		<button-image>wildkatze</button-image>
+		<text-video>Crazy Frog (deutsch: „Bekloppter Frosch“) ist eine Animationsfigur, die im gleichnamigen Werbespot für einen Klingelton der Firma Jamba! vorkommt.</text-video>
+		<background-detail></background-detail>
+		<background-video></background-video>
+	</media>
+	<media>
+		<video-url>http://h1930837.stratoserver.net:8080/LanCenter/video/testvideo.3gp</video-url>
+		<audio-url>http://h1930837.stratoserver.net:8080/LanCenter/audio/testAudio.mp3</audio-url>
+		<image-url>http://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/European_Wildcat_Nationalpark_Bayerischer_Wald_02.jpg/640px-European_Wildcat_Nationalpark_Bayerischer_Wald_02.jpg</image-url>
+		<text>Die Wildkatze (Felis silvestris) ist eine Art innerhalb der Familie der Katzen, die in verschiedenen Unterarten in Europa, Afrika, Westasien, Zentralasien bis nach Indien heimisch ist. Da sie zu den am weitesten verbreiteten Katzen gehört, wird sie in der Roten Liste der IUCN seit 2002 als nicht gefährdet (Least Concern) geführt. Die afrikanische Wildkatze oder Falbkatze ist die Stammform der Hauskatze.</text>
+		<headline>Wildkatze</headline>
+		<button-image>wildkatze</button-image>
+		<text-video>Crazy Frog (deutsch: „Bekloppter Frosch“) ist eine Animationsfigur, die im gleichnamigen Werbespot für einen Klingelton der Firma Jamba! vorkommt.</text-video>
+		<background-detail></background-detail>
+		<background-video></background-video>
+	</media>
+	<media>
+		<video-url>http://h1930837.stratoserver.net:8080/LanCenter/video/testvideo.3gp</video-url>
+		<audio-url>http://h1930837.stratoserver.net:8080/LanCenter/audio/testAudio.mp3</audio-url>
+		<image-url>http://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/European_Wildcat_Nationalpark_Bayerischer_Wald_02.jpg/640px-European_Wildcat_Nationalpark_Bayerischer_Wald_02.jpg</image-url>
+		<text>Die Wildkatze (Felis silvestris) ist eine Art innerhalb der Familie der Katzen, die in verschiedenen Unterarten in Europa, Afrika, Westasien, Zentralasien bis nach Indien heimisch ist. Da sie zu den am weitesten verbreiteten Katzen gehört, wird sie in der Roten Liste der IUCN seit 2002 als nicht gefährdet (Least Concern) geführt. Die afrikanische Wildkatze oder Falbkatze ist die Stammform der Hauskatze.</text>
+		<headline>Wildkatze</headline>
+		<button-image>wildkatze</button-image>
+		<text-video>Crazy Frog (deutsch: „Bekloppter Frosch“) ist eine Animationsfigur, die im gleichnamigen Werbespot für einen Klingelton der Firma Jamba! vorkommt.</text-video>
+		<background-detail></background-detail>
+		<background-video></background-video>
+	</media>
+	<media>
+		<video-url>http://h1930837.stratoserver.net:8080/LanCenter/video/testvideo.3gp</video-url>
+		<audio-url>http://h1930837.stratoserver.net:8080/LanCenter/audio/testAudio.mp3</audio-url>
+		<image-url>http://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/European_Wildcat_Nationalpark_Bayerischer_Wald_02.jpg/640px-European_Wildcat_Nationalpark_Bayerischer_Wald_02.jpg</image-url>
+		<text>Die Wildkatze (Felis silvestris) ist eine Art innerhalb der Familie der Katzen, die in verschiedenen Unterarten in Europa, Afrika, Westasien, Zentralasien bis nach Indien heimisch ist. Da sie zu den am weitesten verbreiteten Katzen gehört, wird sie in der Roten Liste der IUCN seit 2002 als nicht gefährdet (Least Concern) geführt. Die afrikanische Wildkatze oder Falbkatze ist die Stammform der Hauskatze.</text>
+		<headline>Wildkatze</headline>
+		<button-image>wildkatze</button-image>
+		<text-video>Crazy Frog (deutsch: „Bekloppter Frosch“) ist eine Animationsfigur, die im gleichnamigen Werbespot für einen Klingelton der Firma Jamba! vorkommt.</text-video>
+		<background-detail></background-detail>
+		<background-video></background-video>
+	</media>
+	<media>
+		<video-url>http://h1930837.stratoserver.net:8080/LanCenter/video/testvideo.3gp</video-url>
+		<audio-url>http://h1930837.stratoserver.net:8080/LanCenter/audio/testAudio.mp3</audio-url>
+		<image-url>http://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/European_Wildcat_Nationalpark_Bayerischer_Wald_02.jpg/640px-European_Wildcat_Nationalpark_Bayerischer_Wald_02.jpg</image-url>
+		<text>Die Wildkatze (Felis silvestris) ist eine Art innerhalb der Familie der Katzen, die in verschiedenen Unterarten in Europa, Afrika, Westasien, Zentralasien bis nach Indien heimisch ist. Da sie zu den am weitesten verbreiteten Katzen gehört, wird sie in der Roten Liste der IUCN seit 2002 als nicht gefährdet (Least Concern) geführt. Die afrikanische Wildkatze oder Falbkatze ist die Stammform der Hauskatze.</text>
+		<headline>Wildkatze</headline>
+		<button-image>wildkatze</button-image>
+		<text-video>Crazy Frog (deutsch: „Bekloppter Frosch“) ist eine Animationsfigur, die im gleichnamigen Werbespot für einen Klingelton der Firma Jamba! vorkommt.</text-video>
+		<background-detail></background-detail>
+		<background-video></background-video>
+	</media>
+	<media>
+		<video-url>http://h1930837.stratoserver.net:8080/LanCenter/video/testvideo.3gp</video-url>
+		<audio-url>http://h1930837.stratoserver.net:8080/LanCenter/audio/testAudio.mp3</audio-url>
+		<image-url>http://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/European_Wildcat_Nationalpark_Bayerischer_Wald_02.jpg/640px-European_Wildcat_Nationalpark_Bayerischer_Wald_02.jpg</image-url>
+		<text>Die Wildkatze (Felis silvestris) ist eine Art innerhalb der Familie der Katzen, die in verschiedenen Unterarten in Europa, Afrika, Westasien, Zentralasien bis nach Indien heimisch ist. Da sie zu den am weitesten verbreiteten Katzen gehört, wird sie in der Roten Liste der IUCN seit 2002 als nicht gefährdet (Least Concern) geführt. Die afrikanische Wildkatze oder Falbkatze ist die Stammform der Hauskatze.</text>
+		<headline>Wildkatze</headline>
+		<button-image>wildkatze</button-image>
+		<text-video>Crazy Frog (deutsch: „Bekloppter Frosch“) ist eine Animationsfigur, die im gleichnamigen Werbespot für einen Klingelton der Firma Jamba! vorkommt.</text-video>
+		<background-detail></background-detail>
+		<background-video></background-video>
+	</media>
+	<media>
+		<video-url>http://h1930837.stratoserver.net:8080/LanCenter/video/testvideo.3gp</video-url>
+		<audio-url>http://h1930837.stratoserver.net:8080/LanCenter/audio/testAudio.mp3</audio-url>
+		<image-url>http://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/European_Wildcat_Nationalpark_Bayerischer_Wald_02.jpg/640px-European_Wildcat_Nationalpark_Bayerischer_Wald_02.jpg</image-url>
+		<text>Die Wildkatze (Felis silvestris) ist eine Art innerhalb der Familie der Katzen, die in verschiedenen Unterarten in Europa, Afrika, Westasien, Zentralasien bis nach Indien heimisch ist. Da sie zu den am weitesten verbreiteten Katzen gehört, wird sie in der Roten Liste der IUCN seit 2002 als nicht gefährdet (Least Concern) geführt. Die afrikanische Wildkatze oder Falbkatze ist die Stammform der Hauskatze.</text>
+		<headline>Wildkatze</headline>
+		<button-image>wildkatze</button-image>
+		<text-video>Crazy Frog (deutsch: „Bekloppter Frosch“) ist eine Animationsfigur, die im gleichnamigen Werbespot für einen Klingelton der Firma Jamba! vorkommt.</text-video>
+		<background-detail></background-detail>
+		<background-video></background-video>
+	</media>
 </mediainfo>
