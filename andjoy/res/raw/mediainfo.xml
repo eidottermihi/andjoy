@@ -190,8 +190,8 @@
 		<background-video></background-video>
 	</media>
 	<media>
-		<video-url>http://h1930837.stratoserver.net:8080/LanCenter/video/testvideo.3gp</video-url>
-		<audio-url>http://h1930837.stratoserver.net:8080/LanCenter/audio/testAudio.mp3</audio-url>
+		<video-url></video-url>
+		<audio-url></audio-url>
 		<image-url>http://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/European_Wildcat_Nationalpark_Bayerischer_Wald_02.jpg/640px-European_Wildcat_Nationalpark_Bayerischer_Wald_02.jpg</image-url>
 		<text>Die Wildkatze (Felis silvestris) ist eine Art innerhalb der Familie der Katzen, die in verschiedenen Unterarten in Europa, Afrika, Westasien, Zentralasien bis nach Indien heimisch ist. Da sie zu den am weitesten verbreiteten Katzen gehört, wird sie in der Roten Liste der IUCN seit 2002 als nicht gefährdet (Least Concern) geführt. Die afrikanische Wildkatze oder Falbkatze ist die Stammform der Hauskatze.</text>
 		<headline>Wildkatze</headline>
