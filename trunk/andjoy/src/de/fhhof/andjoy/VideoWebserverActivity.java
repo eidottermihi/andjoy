@@ -83,8 +83,6 @@ public class VideoWebserverActivity extends Activity implements OnPreparedListen
 
 	public void onPrepared(MediaPlayer mp) {
 		ProgressBar progressBar = (ProgressBar)findViewById(R.id.progressBar1);
-		progressBar.setVisibility(View.GONE);
-
-		
+		progressBar.setVisibility(View.GONE);		
 	}
 }

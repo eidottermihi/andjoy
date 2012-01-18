@@ -13,6 +13,7 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -58,16 +59,27 @@ public class DetailViewActivity extends Activity implements OnClickListener, Run
 			if(drawable != null){
 				imgView.setImageDrawable(drawable);
 			}
+			// Audio-Button
 			audioButton = (Button) findViewById(R.id.audioButton);
-			
-			Thread th = new Thread(this);
-			th.start();
-
-
-			Button button1 = (Button) findViewById(R.id.audioButton);
-			button1.setOnClickListener(this);
+			Log.v("AUDIO-URL", "URL:>>" + mediaInfo.getAudioUrl() + "<<");
+			if(mediaInfo.getAudioUrl() != null && !mediaInfo.getAudioUrl().equals("")){
+				audioButton.setOnClickListener(this);
+				Thread th = new Thread(this);
+				th.start();				
+			} else {
+				audioButton.setEnabled(false);
+			}
+			// Video-Button
 			Button button2 = (Button) findViewById(R.id.videoButton);
-			button2.setOnClickListener(this);
+			Log.v("VIDEO-URL", "URL:>>" + mediaInfo.getVideoUrl() + "<<");
+			if(mediaInfo.getVideoUrl() != null && !mediaInfo.getVideoUrl().equals("")){
+				button2.setOnClickListener(this);
+			} else {
+				button2.setEnabled(false);
+			}
+			
+
+
 			// Text anzeigen
 			TextView tView = (TextView) findViewById(R.id.textView1);
 			tView.setText(mediaInfo.getText());
@@ -180,15 +192,33 @@ public class DetailViewActivity extends Activity implements OnClickListener, Run
 
 	@Override
 	protected void onPause() {
-		audio.release();
+		if(audio != null){
+			audio.reset();
+		}
 		super.onPause();
 	}
 
 	@Override
 	protected void onStop() {
-		audio.release();
+		if(audio != null){
+			audio.reset();
+		}
 		super.onStop();
 	}
+
+	@Override
+	protected void onResume() {
+		if(audio != null){
+			audioButton.setEnabled(false);
+			Thread th = new Thread(this);
+			th.start();	
+		}
+		super.onResume();
+	}
+	
+	
+	
+	
 	
 	
 }
